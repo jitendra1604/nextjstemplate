@@ -6,6 +6,71 @@
       color: #5c1a53;
       font-size: 16px;
       font-weight: 600;
+      transition: 0.5s ease;
+    }
+    .fly_content{
+      display: none;
+      position: absolute;
+      background-color: #fff;
+      left: 0;
+      right: 0;
+      padding: 47px 0 47px 79px;
+      box-shadow: 0px 10px 10px rgba(92, 26, 83, 0.1);
+      // bottom: 0;
+      h3, p{
+        color: #5c1a53;
+        font-weight: 400;
+      }
+      p{
+        font-size: 20px;
+        max-width: 250px;
+      }
+      .nav_links{
+        a{
+          font-size: 30px;
+          line-height: 0.93;
+          letter-spacing: 0.5px;
+          font-weight: 500;
+          font-family: 'Playfair Display', serif;
+          text-decoration: none;
+          position: relative;
+          display: flex;
+          padding: 31px 0 !important;
+          margin-bottom: 40px;
+          span{
+            align-self: center;
+            margin-left: 10px;
+          }
+        }
+        a:nth-child(odd){
+          color: #5C1A53;
+        }
+        a:nth-child(even){
+          color: #D35F33;
+        }
+        a::after{
+          content: '';
+          display: inline-block;
+          position: absolute;
+          right: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          height: 100%;
+          width: 100%;
+          opacity: 0.7;
+        }
+        a:nth-child(odd)::after{
+          background: linear-gradient(270deg, #5C1A53 0%, rgba(92, 26, 83, 0) 65.37%, rgba(227, 165, 75, 0) 65.38%);
+        }
+        a:nth-child(even)::after{
+          background: linear-gradient(270deg, #E3A54B 0%, rgba(227, 165, 75, 0) 68.61%);
+        }
+      }
+    }
+    .fly_cont:hover{
+      .fly_content{
+        display: block;
+      }
     }
   }
 }
