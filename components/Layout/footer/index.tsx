@@ -18,7 +18,7 @@ export const Footer = () => {
                 <ul className={styles.sublinks}>
                   {main.subtitle.map((sub) => {
                     return (
-                      <li>
+                      <li key={sub.id}>
                         <a href="#">
                           <h2>{sub.name}</h2>
                         </a>
@@ -28,7 +28,7 @@ export const Footer = () => {
                 </ul>
               </div>
               <Row>
-                <Col>
+                <Col key={main.id}>
                   <p>{main.content}</p>
                   <div className={styles.mailsection}>
                     <div>
@@ -39,18 +39,18 @@ export const Footer = () => {
                     </div>
                   </div>
                 </Col>
-                <Col>
+                <Col key={main.id}>
                   <div>
                     <Row>
-                      <Col>
+                      <Col key={main.id}>
                         {main.links.map((dataname, index) => {
                           return (
-                            <div>
+                            <div key={dataname.id}>
                               <p>{dataname.title}</p>
                               <ul>
                                 {dataname.sublinks?.map((links, index) => {
                                   return (
-                                    <li>
+                                    <li key={links.id}>
                                       <a href="#">{links.name}</a>
                                     </li>
                                   );
@@ -60,10 +60,10 @@ export const Footer = () => {
                           );
                         })}
                       </Col>
-                      <Col>
+                      <Col key={main.id}>
                         {main.links.map((dataname, index) => {
                           return (
-                            <div>
+                            <div key={dataname.id}>
                               {dataname.linkssecond?.map((links, index) => {
                                 return (
                                   <>
