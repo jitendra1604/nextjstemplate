@@ -16,7 +16,12 @@ export const Header = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className={`${styles.sectionlist} mx-auto`}>
-            <Nav.Link href="#home">FLY</Nav.Link>
+            <div>
+              <Nav.Link href="#home">FLY</Nav.Link>
+              <div className="fly_content">
+                  
+              </div>
+            </div>
             <Nav.Link href="#link">Discover Programs</Nav.Link>
             <Nav.Link href="#link">Enterprise Solutions</Nav.Link>
             <Nav.Link href="#link">About</Nav.Link>
