@@ -3,10 +3,10 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Image from "next/image";
-import Logo from "../../../../public/images/accreda-logo.png";
-import Fly_img from "../../../../public/images/fly_img.png";
-import Fly_icon from "../../../../public/images/fly_icon.png";
-import Benefit_icon from "../../../../public/images/benefit_icon.png";
+import Logo from '../../../public/images/accreda-logo.png';
+import Fly_img from '../../../public/images/fly_img.png';
+import Fly_icon from '../../../public/images/fly_icon.png';
+import Benefit_icon from '../../../public/images/benefit_icon.png';
 import styles from "./header.module.scss";
 import { Col, Row } from "react-bootstrap";
 
