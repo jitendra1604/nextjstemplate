@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import React from "react";
 import Head from "next/head";
 import styles from "../styles/Home.module.scss";
-import Header from "../pages/components/Header/header";
+import { Layout } from "./components";
 
 const Home: NextPage = () => {
   return (
@@ -12,7 +12,7 @@ const Home: NextPage = () => {
         <meta name="description" content="PS group" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header></Header>
+      <Layout></Layout>
     </div>
   );
 };
