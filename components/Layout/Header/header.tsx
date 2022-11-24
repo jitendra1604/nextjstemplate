@@ -18,9 +18,7 @@ export const Header = () => {
           <Nav className={`${styles.sectionlist} mx-auto`}>
             <div>
               <Nav.Link href="#home">FLY</Nav.Link>
-              <div className="fly_content">
-                  
-              </div>
+              <div className="fly_content"></div>
             </div>
             <Nav.Link href="#link">Discover Programs</Nav.Link>
             <Nav.Link href="#link">Enterprise Solutions</Nav.Link>
