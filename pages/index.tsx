@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import React from "react";
 import Head from "next/head";
 import styles from "../styles/Home.module.scss";
-import { Layout } from "./components";
+import { Layout } from "../components";
 
 const Home: NextPage = () => {
   return (

@@ -1,0 +1,41 @@
+@mixin button-bg($bg) {
+  background: $bg;
+  &:hover {
+    background: $bg;
+  }
+}
+@mixin button-clo($col) {
+  color: $col;
+  &:hover {
+    color: $col;
+  }
+  &:active {
+    color: darken($col, 25%);
+  }
+}
+
+.btn {
+  color: white;
+  text-decoration: none;
+  padding: 18px 37px;
+  font-family: "Playfair Display", serif;
+  font-size: 18px;
+  border-radius: 0px;
+}
+.btn-border {
+  color: #611e58;
+  text-decoration: none;
+  padding: 18px 37px;
+  font-family: "Playfair Display", serif;
+  border: 1px solid #611e58;
+  font-size: 18px;
+}
+.btn-white {
+  @include button-bg(#fff);
+  @include button-clo(#611e58);
+}
+
+.btn-violet {
+  @include button-bg(#611e58);
+  @include button-clo(#fff);
+}

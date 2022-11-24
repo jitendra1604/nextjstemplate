@@ -1,0 +1,38 @@
+.footer_scetion {
+  text-align: center;
+  .imageborder {
+    margin-bottom: 32px;
+  }
+  h3 {
+    margin-bottom: 32px;
+  }
+  ul {
+    &.sublinks {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 60px;
+      li {
+        list-style: none;
+        margin-right: 40px;
+      }
+    }
+  }
+  p {
+    max-width: 352px;
+    width: 100%;
+    text-align: left;
+  }
+  ul {
+    padding-left: 0px;
+    li {
+      list-style: none;
+      text-align: left;
+    }
+  }
+  .mailsection {
+    display: flex;
+    p {
+      margin-left: 10px;
+    }
+  }
+}
