@@ -3,10 +3,10 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Image from "next/image";
-import Logo from '../../../public/images/accreda-logo.png';
-import Fly_img from '../../../public/images/fly_img.png';
-import Fly_icon from '../../../public/images/fly_icon.png';
-import Benefit_icon from '../../../public/images/benefit_icon.png';
+import logo from '../../../public/images/accreda-logo.png';
+import flyimg from '../../../public/images/fly_img.png';
+import flyicon from '../../../public/images/fly_icon.png';
+import benefiticon from '../../../public/images/benefit_icon.png';
 import styles from "./header.module.scss";
 import { Col, Row } from "react-bootstrap";
 
@@ -15,7 +15,7 @@ export const Header = () => {
     <Navbar className={styles.header} expand="lg">
       <Container>
         <Navbar.Brand href="#home">
-          <Image src={Logo} alt="Logo" />
+          <Image src={logo} alt="Logo" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
@@ -32,7 +32,7 @@ export const Header = () => {
                           </Col>
                           <Col md="7">
                             <figure>
-                                <Image src={Fly_img} alt="fly-img" />
+                                <Image src={flyimg} alt="fly-img" />
                             </figure>
                           </Col>
                         </Row>
@@ -40,13 +40,13 @@ export const Header = () => {
                     <Col md="6">
                         <div className={styles.nav_links}>
                           <a href="#">
-                            <Image src={Fly_icon} alt="fly-icon" />
+                            <Image src={flyicon} alt="fly-icon" />
                             <span>
                               What is FLY?
                             </span>
                           </a>
                           <a href="#">
-                            <Image src={Benefit_icon} alt="benefit-icon" />
+                            <Image src={benefiticon} alt="benefit-icon" />
                             <span>
                               What is FLY?
                             </span>
