@@ -28,7 +28,7 @@ export const Footer = () => {
                 </ul>
               </div>
               <Row>
-                <Col key={main.id}>
+                <Col key={main.id} className={styles.rlativesection}>
                   <p>{main.content}</p>
                   <div className={styles.mailsection}>
                     <div>
