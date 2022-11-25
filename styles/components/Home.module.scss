@@ -110,6 +110,9 @@
 
 // Home page
 .bannersec {
+  @media (max-width: 767px) {
+    padding: 0px 15px;
+  }
   h1 {
     width: 100%;
     max-width: 836px;
@@ -120,6 +123,9 @@
     span {
       color: #daa75b;
     }
+    @media (max-width: 767px) {
+      font-size: 37px;
+    }
   }
   p {
     font-size: 20px;
@@ -128,18 +134,159 @@
     text-align: center;
     padding-bottom: 60px;
     font-family: "Manrope", sans-serif !important;
+    @media (max-width: 767px) {
+      font-size: 14px;
+      padding-bottom: 20px;
+    }
   }
   .buttonsection {
     max-width: 543px;
     width: 100%;
     margin: 0 auto;
-    a {
-      margin-bottom: 10px;
+    .button_val {
+      @media (max-width: 767px) {
+        text-align: center;
+      }
+      a {
+        margin-bottom: 10px;
+      }
+      p {
+        font-size: 12px;
+        max-width: 212px;
+        font-family: "Manrope", sans-serif !important;
+      }
     }
-    p {
-      font-size: 12px;
-      max-width: 212px;
-      font-family: "Manrope", sans-serif !important;
+  }
+}
+
+.partnerlist {
+  text-align: center;
+  &.Program_section {
+    position: relative;
+    margin-bottom: 290px;
+
+    @media (max-width: 767px) {
+      margin-bottom: 90px;
+    }
+    h3 {
+      max-width: 634px;
+      width: 100%;
+      margin: 0 auto;
+      color: #ffffff;
+      padding-bottom: 16px;
+      span {
+        color: #daa75b;
+      }
+    }
+    .iframe_card {
+      background-color: #611e58;
+      padding: 28px;
+      max-width: 846px;
+      width: 100%;
+      margin: 0 auto;
+      position: absolute;
+      bottom: -114px;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+      .iframe_card_content {
+        position: relative;
+        &::after {
+          background-image: url("../../public/images/cardgray.svg");
+          content: "";
+          position: absolute;
+          width: 259.15px;
+          height: 284px;
+          left: -75px;
+          top: 20px;
+          background-repeat: no-repeat;
+        }
+        &::before {
+          background-image: url("../../public/images/cardgray1.svg");
+          content: "";
+          position: absolute;
+          width: 110px;
+          height: 120.55px;
+          right: -39px;
+          bottom: -67px;
+          background-repeat: no-repeat;
+        }
+      }
+    }
+  }
+  img {
+    &.border_line {
+      margin: 40px 0px;
+    }
+  }
+  img {
+    margin-bottom: 0px;
+  }
+
+  h5 {
+    max-width: 552px;
+    width: 100%;
+    margin: 20px auto;
+    color: #5c1a53;
+    @media (max-width: 767px) {
+      font-size: 20px;
+    }
+    span {
+      color: #371032;
+    }
+  }
+  p {
+    span {
+      color: #5c1a53;
+      text-decoration: underline;
+    }
+  }
+}
+
+.careercontent {
+  margin: 0px 80px;
+  @media (max-width: 767px) {
+    margin: 0px;
+    padding: 0px 15px;
+  }
+  img {
+    margin-bottom: 20px;
+  }
+  h4 {
+    color: #daa75b;
+    margin-bottom: 18px;
+  }
+  h2 {
+    color: #611e58;
+    margin-bottom: 32px;
+  }
+  p {
+    &.p-primary {
+      margin-bottom: 30px;
+      color: #371032;
+    }
+  }
+  a {
+    text-decoration: underline;
+    color: #5c1a53;
+  }
+  h3 {
+    margin-top: 56px;
+    margin-bottom: 12px;
+    color: #611e58;
+  }
+  .image_container {
+    width: 100%;
+    > div {
+      position: unset !important;
+    }
+
+    .image {
+      object-fit: contain;
+      width: 100% !important;
+      position: relative !important;
+      height: unset !important;
     }
   }
 }

@@ -21,6 +21,9 @@
   font-family: "Playfair Display", serif;
   font-size: 18px;
   border-radius: 0px;
+  @media (max-width: 767px) {
+    padding: 10px 10px !important;
+  }
 }
 .btn-border {
   color: #611e58;
@@ -30,6 +33,17 @@
   border: 1px solid #611e58;
   font-size: 18px;
 }
+.btn-border2,
+.btn-border2:hover,
+.btn-border2:active {
+  color: #fff;
+  text-decoration: none;
+  padding: 18px 37px;
+  font-family: "Playfair Display", serif;
+  border: 1px solid #daa75b;
+  font-size: 18px;
+}
+
 .btn-white {
   @include button-bg(#fff);
   @include button-clo(#611e58);
@@ -38,4 +52,8 @@
 .btn-violet {
   @include button-bg(#611e58);
   @include button-clo(#fff);
+}
+.btn-gold {
+  // @include button-bg(#fff);
+  @include button-clo(#daa75b);
 }

@@ -14,13 +14,13 @@ const Bannersection = () => {
             <div
               className={`${styles.buttonsection} d-flex justify-content-between`}
             >
-              <div>
+              <div className={styles.button_val}>
                 <a href="#" className=" btn btn-violet">
                   {data.buttonname}
                 </a>
                 <p className="p-primary">{data.buttonname_content}</p>
               </div>
-              <div>
+              <div className={styles.button_val}>
                 <a href="#" className="btn btn-border">
                   {data.buttonname1}
                 </a>
