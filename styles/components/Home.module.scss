@@ -108,6 +108,44 @@
   margin-left: 0.5rem;
 }
 
+// Home page
+.bannersec {
+  h1 {
+    width: 100%;
+    max-width: 836px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #611e58;
+    span {
+      color: #daa75b;
+    }
+  }
+  p {
+    font-size: 20px;
+    max-width: 667px;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 60px;
+    font-family: "Manrope", sans-serif !important;
+  }
+  .buttonsection {
+    max-width: 543px;
+    width: 100%;
+    margin: 0 auto;
+    a {
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 12px;
+      max-width: 212px;
+      font-family: "Manrope", sans-serif !important;
+    }
+  }
+}
+
+// End Home Page
+
 @media (max-width: 600px) {
   .grid {
     width: 100%;

@@ -100,10 +100,7 @@ export const Header = () => {
                             <Image src={announcement} alt="announcement-img" className="img-fluid w-100"/>
                           </figure>
                           <Card.Body className={styles.announce_body}>
-                            <Card.Text>
-                              Some quick example text to build on the card title and make up the
-                              bulk of the card's content.
-                            </Card.Text>
+                            <Card.Text>Some quick example text to build on the card title and make up the bulk of the cards content.</Card.Text>
                             <Card.Link href="#">Read more<span><Image src={rightarrow} alt="right-arrw"/></span></Card.Link>
                           </Card.Body>
                         </Card>
@@ -115,10 +112,7 @@ export const Header = () => {
                             <Image src={announcement} alt="announcement-img" className="img-fluid w-100"/>
                           </figure>
                           <Card.Body className={styles.announce_body}>
-                            <Card.Text>
-                              Some quick example text to build on the card title and make up the
-                              bulk of the card's content.
-                            </Card.Text>
+                            <Card.Text>Some quick example text to build on the card title and make up the bulk of the cards content.</Card.Text>
                             <Card.Link href="#">Read more<span><Image src={rightarrow} alt="right-arrw"/></span></Card.Link>
                           </Card.Body>
                         </Card>

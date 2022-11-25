@@ -91,5 +91,25 @@ export const Footerdata = [
         ],
       },
     ],
+    conntacts: [
+      {
+        id: 19,
+        name: "Terms & Conditions | Privacy Policy | Compilance | Cookie Policy",
+        Image: "",
+        Image1: "",
+      },
+      {
+        id: 20,
+        name: "",
+        Image: "/images/footerlogo.svg",
+        Image1: "",
+      },
+      {
+        id: 21,
+        name: "2022, By Keybridge Global Education, All Rights Reserved",
+        Image: "",
+        Image1: "/images/copyrights.svg",
+      },
+    ],
   },
 ];
