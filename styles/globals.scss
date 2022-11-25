@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap");
 @import "./buttons/buttons.scss";
+@import "../styles/variables.scss";
 
 html,
 body {
@@ -50,12 +51,18 @@ h4 {
   font-weight: 500;
   font-family: "Playfair Display", serif;
 }
+h5{
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: 500;
+  font-family: "Playfair Display", serif;
+}
 p {
   font-size: 16px;
   line-height: 1.5;
   font-weight: 400;
 }
-.p-primary {
+.p_primary {
   font-size: 14px;
   line-height: 1.4;
   font-weight: 400;
@@ -68,12 +75,12 @@ p {
 
 // Typography //
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
-}
+// @media (prefers-color-scheme: dark) {
+//   html {
+//     color-scheme: dark;
+//   }
+//   body {
+//     color: white;
+//     background: black;
+//   }
+// }
