@@ -10,7 +10,7 @@
       font-weight: 600;
       transition: 0.5s ease;
     }
-    .mega_menu_layout {
+    .mega_menu_layout{
       position: absolute;
       background-color: $color-white;
       left: 0;
@@ -18,12 +18,10 @@
       padding: 47px 0 47px 79px;
       z-index: 1;
       box-shadow: 0px 10px 10px rgba(92, 26, 83, 0.1);
-      margin-top: 48px;
     }
-    .fly_content {
+    .fly_content{
       display: none;
-      h3,
-      p {
+      h3, p{
         color: $secondary-vt-color;
         font-weight: 400;
       }
@@ -49,8 +47,9 @@
           }
         }
 
-        a:nth-child(odd) {
+        a:nth-child(odd){
           color: $secondary-vt-color;
+
         }
         a:nth-child(even) {
           color: #d35f33;
@@ -89,14 +88,18 @@
       }
     }
 
-    .discover_content {
+    .discover_content{
       position: absolute;
-      padding: 47px 79px;
-      .ryt_brdr {
+      padding: 47px 0;
+      display: none;
+      .mega_container{
+        max-width: 1140px;
+      }
+      .ryt_brdr{
         position: relative;
       }
-      .ryt_brdr::after {
-        content: "";
+      .ryt_brdr::after{
+        content: '';
         background-color: $secondary-vt-color;
         height: 100%;
         width: 1px;
@@ -106,21 +109,21 @@
         bottom: 0;
         display: inline-block;
       }
-      .about_cards {
+      .about_cards{
         position: relative;
         padding-left: 25px;
         max-width: 260px;
         margin: 0 auto 49px;
-        h5 {
+        h5{
           color: $secondary-vt-color;
           margin-bottom: 10px;
         }
-        p {
+        p{
           color: $secondary-vt-color;
         }
       }
-      .about_cards::before {
-        content: "";
+      .about_cards::before{
+        content: '';
         background-image: url(../../../public/images/diamond_icon.png);
         background-position: center;
         background-repeat: no-repeat;
@@ -131,39 +134,66 @@
         height: 23px;
         width: 17px;
       }
-      .announcement_card {
+      .announcement_card{
         border: none;
-        max-width: 250px;
-        margin: 0 auto;
-        .title_txt {
+        margin: 0 25px;
+        .title_txt{
           color: $secondary-vt-color;
           font-size: 18px;
           font-weight: 500;
           font-family: "Playfair Display", serif;
           margin-bottom: 8px;
         }
-        .announce_body {
+        .announce_body{
           padding: 10px 0;
           margin: 8px 0;
-          p {
+          p{
             font-size: 14px;
             color: $secondary-vt-color;
             font-weight: 400;
             line-height: 1.5;
           }
-          a {
+          a{
             padding: 0 !important;
             color: $secondary-vt-color;
             font-weight: 700;
             text-decoration: underline;
-            img {
+            img{
               margin-left: 5px;
             }
           }
         }
-        figure {
-          margin-bottom: 0;
-        }
+        figure{margin-bottom: 0;}
+      }
+      .faded_imgs{
+        position: relative;
+      }
+      .faded_imgs::before{
+        content: '';
+        background-image: url(../../../public/images/left_img.png);
+        background-repeat: no-repeat;
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        height: 100%;
+        width: 100%;
+      }
+      .faded_imgs::after{
+        content: '';
+        background-image: url(../../../public/images/ryt_img.png);
+        background-repeat: no-repeat;
+        display: inline-block;
+        position: absolute;
+        right: 0;
+        height: 100%;
+        width: 130px;
+        top: 25px;
+      }
+    }
+    .discover_cont:hover{
+      border-bottom: 1px solid $secondary-vt-color;
+      .discover_content{
+        display: block;
       }
     }
   }
