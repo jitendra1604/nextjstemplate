@@ -10,8 +10,9 @@ import benefiticon from '../../../public/images/benefit_icon.png';
 import announcement from '../../../public/images/announcement.png';
 import rightarrow from '../../../public/images/right-arrw.png';
 import downarrow from '../../../public/images/down-arrow.png';
+import flyiconvio from '../../../public/images/fly_vio.png';
 import styles from "./header.module.scss";
-import { Card, Col, Row } from "react-bootstrap";
+import { Button, Card, Col, Row, Tab } from "react-bootstrap";
 
 export const Header = () => {
   return (
@@ -23,7 +24,7 @@ export const Header = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className={`${styles.sectionlist} mx-auto`}>
-            <div className={styles.fly_cont}>
+            <div className={` ${styles.fly_cont} mx-md-3`}>
               <Nav.Link href="#home">FLY<span className="ms-2"><Image src={downarrow} alt="down-arrow"/></span></Nav.Link>
               <div className={`${styles.fly_content} ${styles.mega_menu_layout}`}>
                   <Row>
@@ -60,9 +61,148 @@ export const Header = () => {
               </div>
             </div>
 
-            <div className={styles.discover_cont}>
-              <Nav.Link href="#link">Discover Programs <span className="ms-2"><Image src={downarrow} alt="down-arrow"/></span></Nav.Link>
-              <div className={`${styles.mega_menu_layout} ${styles.discover_content}`}>
+            
+            <div className={`${styles.discover_cont} mx-md-3`}>
+              <Nav.Link href="#link">Discover Programs<span className="ms-2"><Image src={downarrow} alt="down-arrow"/></span></Nav.Link>
+              <div className={` ${styles.discover_content} ${styles.mega_menu_layout}`}>
+                <Container className={styles.mega_container}>
+                  
+                    <Tab.Container id="left-tabs-example" defaultActiveKey="first">
+                      <Row className="justify-content-center">
+                        <Col sm={2} className={` ${styles.ryt_brdr} ${styles.content_tabs_pddg}`}>
+                          <Nav className={` ${styles.discover_tabs} flex-column`}>
+                            <h5>By Program</h5>
+                            <Nav.Item>
+                              <Nav.Link className={styles.discover_links} eventKey="first">Accreda Signature Program</Nav.Link>
+                            </Nav.Item>
+                            <Nav.Item>
+                              <Nav.Link eventKey="second">Accreda Booster Program</Nav.Link>
+                            </Nav.Item>
+                          </Nav>
+
+                          <Nav className={` ${styles.discover_tabs} flex-column`}>
+                            <h5>By Type</h5>
+                            <Nav.Item>
+                              <Nav.Link eventKey="third">Post Graduate Program</Nav.Link>
+                            </Nav.Item>
+                            <Nav.Item>
+                              <Nav.Link eventKey="fourth">Certificate Program</Nav.Link>
+                            </Nav.Item>
+                          </Nav>
+
+                        </Col>
+                        <Col sm={9} className={styles.content_tabs_pddg}>
+                          <Tab.Content>
+                            <Tab.Pane eventKey="first">
+                              <div className={styles.discover_tabs_content}>
+                                <div className={`${styles.tostmessage} ${styles.violet_bg}`}>
+                                  <p>The Accreda Booster Program are byte sized / micro-skills acquisition programs that lead to proficiency in one defined area. These are short term programs and typically take between 2 and 4 weeks for completion.</p>
+                                </div>
+                                <div className="d-flex flex-wrap">
+                                    <figure>
+                                      <Image src={flyiconvio} alt="fly-icon"/>
+                                    </figure>
+                                    <div>
+                                      <h5>Our Programs</h5>
+                                      <span>Powered by FLY</span>
+                                    </div>
+                                </div>
+                                <ul className={`${styles.mega_lists} list-unstyled row`}>
+                                  <li className="col-md-4"><a href="#">Digital Marketing</a></li>
+                                  <li className="col-md-4"><a href="#">Business Acumen</a></li>
+                                  <li className="col-md-4"><a href="#">Leadership</a></li>
+                                  <li className="col-md-4"><a href="#">Project Management</a></li>
+                                  <li className="col-md-4"><a href="#">Professional Skills</a></li>
+                                </ul>
+                              </div>
+                            </Tab.Pane>
+                            <Tab.Pane eventKey="second">
+                                <div className={styles.discover_tabs_content}>
+                                <div className={styles.tostmessage}>
+                                  <p>The Accreda Booster Program are byte sized / micro-skills acquisition programs that lead to proficiency in one defined area. These are short term programs and typically take between 2 and 4 weeks for completion.</p>
+                                </div>
+                                <div className="d-flex flex-wrap">
+                                    <figure>
+                                      <Image src={flyiconvio} alt="fly-icon"/>
+                                    </figure>
+                                    <div>
+                                      <h5>Our Programs</h5>
+                                      <span>Powered by FLY</span>
+                                    </div>
+                                </div>
+                                <ul className={`${styles.mega_lists} list-unstyled row`}>
+                                  <li className="col-md-4"><a href="#">Modern Management</a></li>
+                                  <li className="col-md-4"><a href="#">Business Acumen 01</a></li>
+                                  <li className="col-md-4"><a href="#">Business Acumen 02</a></li>
+                                  <li className="col-md-4"><a href="#">Business Acumen 03</a></li>
+                                  <li className="col-md-4"><a href="#">Business Acumen 04</a></li>
+                                  <li className="col-md-4"><a href="#">Professional Skills 01</a></li>
+                                  <li className="col-md-4"><a href="#">Professional Skills 02</a></li>
+                                  <li className="col-md-4"><a href="#">Professional Skills 03</a></li>
+                                  <li className="col-md-4"><a href="#">Professional Skills 04</a></li>
+                                </ul>
+                              </div>
+                            </Tab.Pane>
+
+                            <Tab.Pane eventKey="third">
+                              <div className={styles.discover_tabs_content}>
+                                <div className={`${styles.tostmessage} ${styles.violet_bg}`}>
+                                  <p>The Accreda Booster Program are byte sized / micro-skills acquisition programs that lead to proficiency in one defined area. These are short term programs and typically take between 2 and 4 weeks for completion.</p>
+                                </div>
+                                <div className="d-flex flex-wrap">
+                                    <figure>
+                                      <Image src={flyiconvio} alt="fly-icon"/>
+                                    </figure>
+                                    <div>
+                                      <h5>Our Programs</h5>
+                                      <span>Powered by FLY</span>
+                                    </div>
+                                </div>
+                                <ul className={`${styles.mega_lists} list-unstyled row`}>
+                                  <li className="col-md-4"><a href="#">Digital Marketing</a></li>
+                                  <li className="col-md-4"><a href="#">Leadership</a></li>
+                                </ul>
+                              </div>
+                            </Tab.Pane>
+                            <Tab.Pane eventKey="fourth">
+                              <div className={styles.discover_tabs_content}>
+                                <div className={styles.tostmessage}>
+                                  <p>The Accreda Booster Program are byte sized / micro-skills acquisition programs that lead to proficiency in one defined area. These are short term programs and typically take between 2 and 4 weeks for completion.</p>
+                                </div>
+                                <div className="d-flex flex-wrap">
+                                    <figure>
+                                      <Image src={flyiconvio} alt="fly-icon"/>
+                                    </figure>
+                                    <div>
+                                      <h5>Our Programs</h5>
+                                      <span>Powered by FLY</span>
+                                    </div>
+                                </div>
+                                <ul className={`${styles.mega_lists} list-unstyled row`}>
+                                  <li className="col-md-4"><a href="#">Analytical Thinking</a></li>
+                                  <li className="col-md-4"><a href="#">Intellectual Property</a></li>
+                                  <li className="col-md-4"><a href="#">Engineering Management</a></li>
+                                  <li className="col-md-4"><a href="#">Data Science</a></li>
+                                  <li className="col-md-4"><a href="#">Purpose Driven Leadership</a></li>
+                                  <li className="col-md-4"><a href="#">Engineering Management</a></li>
+                                </ul>
+                              </div>
+                            </Tab.Pane>
+                          </Tab.Content>
+                        </Col>
+                      </Row>
+                    </Tab.Container>
+                  
+                </Container>
+              </div>
+            </div>
+            
+            <div className={`mx-md-3`}>
+              <Nav.Link href="#link">Enterprise Solutions</Nav.Link>
+            </div>
+            <div className={` ${styles.about_cont} mx-md-3`}>
+              <Nav.Link href="#link">About<span className="ms-2"><Image src={downarrow} alt="down-arrow"/></span></Nav.Link>
+              <div className={`${styles.mega_menu_layout} ${styles.about_content}`}>
                 <div className={styles.faded_imgs}>
                 <Container className={styles.mega_container}>
                   <Row>
@@ -127,9 +267,8 @@ export const Header = () => {
                 </div>
               </div>
             </div>
-            <Nav.Link href="#link">Enterprise Solutions</Nav.Link>
-            <Nav.Link href="#link">About</Nav.Link>
           </Nav>
+          <Button className={styles.outline_btn}>Log in</Button>
         </Navbar.Collapse>
       </Container>
     </Navbar>
