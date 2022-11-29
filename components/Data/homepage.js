@@ -81,6 +81,33 @@ export const Carrercontent = [
   },
 ];
 
+export const contempdata = [
+  {
+    id: "1",
+    img: "",
+    title: "DigitalMarketing",
+    para: "A Postgraduate program that helps you master the digital marketing domain.",
+    foot1: "Offered By: Maryville University",
+    foot2: "Duration: 12 Months",
+  },
+  {
+    id: "2",
+    img: "",
+    title: "Leadership",
+    para: "A Postgraduate program that helps you master the digital marketing domain.",
+    foot1: "Offered By: Maryville University",
+    foot2: "Duration: 12 Months",
+  },
+  {
+    id: "3",
+    img: "",
+    title: "BusinessAcumen",
+    para: "A Postgraduate program that helps you master the digital marketing domain.",
+    foot1: "Offered By: Maryville University",
+    foot2: "Duration: 12 Months",
+  },
+];
+
 export const Universitieslist = [
   {
     id: 1,

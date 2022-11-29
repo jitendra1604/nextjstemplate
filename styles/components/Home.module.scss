@@ -1,3 +1,4 @@
+@import "../variables.scss";
 // .container {
 //   padding: 0 2rem;
 // }
@@ -619,6 +620,72 @@
   }
 }
 // End Home Page
+
+// contempary - start
+
+.contempary_sec {
+  background-color: $secondary-vt-color;
+  padding: 90px 0;
+  h2 {
+    color: $color-white;
+    font-weight: 500;
+    margin-bottom: 53px;
+    span {
+      color: $color-yellow;
+    }
+  }
+  .contempary_tabs {
+    .nav_item {
+      position: relative;
+      a {
+        padding: 5px 0;
+        color: $color-white;
+        font-size: 18px;
+        text-transform: capitalize;
+        margin-right: 73px;
+      }
+    }
+    .nav_item::after {
+      content: "";
+      background-image: url(../../public/images/empty_diamond.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      display: inline-block;
+      position: absolute;
+      right: 25px;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 23px;
+      width: 17px;
+    }
+    .nav_item:last-child {
+      margin-right: 0;
+    }
+    .nav_item:last-child::after {
+      background-image: none;
+    }
+  }
+  .contempary_tab_content {
+    h6 {
+      font-size: 24px;
+      color: $color-white;
+      font-family: "Playfair Display", serif;
+      margin-bottom: 32px;
+      font-weight: 300;
+      span {
+        color: $color-yellow;
+        display: block;
+      }
+    }
+    p {
+      color: $color-white;
+      font-size: 14px;
+      font-weight: 300;
+    }
+  }
+}
+
+// contempary - end
 
 @media (max-width: 600px) {
   .grid {

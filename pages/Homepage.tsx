@@ -1,6 +1,7 @@
 import React from "react";
 import Bannersection from "../components/homepage/Bannersection";
 import Career from "../components/homepage/Career";
+import Contempary from "../components/homepage/Contempary";
 import Enterprise from "../components/homepage/Enterprise";
 import Faqsection from "../components/homepage/Faqsection";
 import Futureplan from "../components/homepage/Futureplan";
@@ -15,6 +16,9 @@ const Homepage = () => {
       <Partnerslist />
       <Programs />
       <Career />
+
+      <Contempary />
+
       <Universities />
       <Futureplan />
       <Enterprise />
