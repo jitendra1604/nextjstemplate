@@ -18,9 +18,9 @@ const Partnerslist = () => {
         return (
           <div key={data.id}>
             <Image src={data.Image} width={88} height={49} alt="" />
-            <h5>
+            <h6>
               {data.title} <span>{data.title2}</span>
-            </h5>
+            </h6>
             <p>
               {data.sub}
               <span>

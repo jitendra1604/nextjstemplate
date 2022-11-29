@@ -1,6 +1,6 @@
 export const Homedata = [
   {
-    id: "1",
+    id: 1,
     title: "Your personalized  ",
     title2: "career building partner",
     content:
@@ -15,7 +15,7 @@ export const Homedata = [
 
 export const Partnerlist = [
   {
-    id: "1",
+    id: 1,
     Image: "/images/social_media.svg",
     title: "Self-management ",
     title2: "is one of the top skills required for careers at Google",
@@ -25,7 +25,7 @@ export const Partnerlist = [
 ];
 export const Programslist = [
   {
-    id: "1",
+    id: 1,
     Image: "/images/Iframe.png",
     title: "Go beyond just programs, develop  ",
     title1: "employability",
@@ -37,7 +37,7 @@ export const Programslist = [
 
 export const Carrercontent = [
   {
-    id: "1",
+    id: 1,
     mian: "Introducing FLY",
     title: "Forever Learning and You",
     content:
@@ -46,33 +46,33 @@ export const Carrercontent = [
     title2: "Experience Accreda’s FLY career building system",
     subtitle: "Receive samples of Accreda’s FLY methodology",
     Image: "/images/careerlogo.png",
-    clid: [
+    slidersection: [
       {
-        id: "2",
+        id: 2,
         title: "Learner discovery",
         content:
           "An ’Intake Survey’ reveals the learners’ current employability skills and competencies, thereby providing a context to their learning pathway.",
       },
       {
-        id: "3",
+        id: 3,
         title: "Curated academic content ",
         content:
           "Contemporary domain knowledge and employability skills specific to each domain are curated by Accreda in association with academic partners/universities.",
       },
       {
-        id: "4",
+        id: 4,
         title: "Development of employability skills",
         content:
           "The Intake survey decides the specific tools each learner needs to develop employability skills, which are integrated with the curated academic content.",
       },
       {
-        id: "5",
+        id: 5,
         title: "Coaching for career skills ",
         content:
           "Group coaching sessions are Accreda’s unique offering during the programs. Facilitated by FLY Navigators, these sessions allow learners to review and discuss their progress at a holistic level.",
       },
       {
-        id: "5",
+        id: 6,
         title: "Continuing career engagement ",
         content:
           "Accreda Signature program applicants get access to a mentorship program facilitated by industry experts, to help focus on ongoing skill development, career advancement and work-life balance.",
@@ -107,3 +107,117 @@ export const contempdata = [
             foot2: "Duration: 12 Months",
         },
     ]
+
+export const Universitieslist = [
+  {
+    id: 1,
+    mian: "In colloboration with",
+    submain: "leading universities",
+
+    empolyes: [
+      {
+        id: 2,
+        title: "Dr. Olivia",
+        profile: "/images/emp1.png",
+        logo: "/images/logo1.svg",
+        content:
+          "Certified Stakeholder Centered Coach and Instructor,  Maryville University",
+      },
+      {
+        id: 3,
+        title: "Dr. Jessica",
+        profile: "/images/emp2.png",
+        logo: "/images/logo2.svg",
+        content:
+          "Productivity Consultant, Success Coach, Business StrategistAgness Scott College",
+      },
+      {
+        id: 4,
+        title: "Dr. rani",
+        profile: "/images/emp3.png",
+        logo: "/images/logo1.svg",
+
+        content:
+          "Certified Stakeholder Centered Coach and Instructor,  Maryville University",
+      },
+      {
+        id: 5,
+        title: "Dr. soni",
+        profile: "/images/emp4.png",
+        logo: "/images/logo2.svg",
+
+        content:
+          "Certified Stakeholder Centered Coach and Instructor,  Maryville University",
+      },
+      {
+        id: 6,
+        title: "Dr. ramesh",
+        profile: "/images/emp5.png",
+        logo: "/images/logo1.svg",
+        content:
+          "Certified Stakeholder Centered Coach and Instructor,  Maryville University",
+      },
+    ],
+  },
+];
+
+export const Futureplancontent = [
+  {
+    id: 1,
+    mian: "Forever-learning, Forever-growing that’s ",
+    mian1: " the future You!",
+    submain:
+      "Developed by world renowned academicians and global heuristics experts, in collaboration with leading universities.",
+
+    patnars: [
+      {
+        id: 2,
+        title: "Customization",
+        logo: "/images/future.svg",
+        content:
+          "Learning that is designed as per the learners unique needs and has a purposeful impact on employability outcomes",
+      },
+      {
+        id: 3,
+        title: "Continuity",
+        logo: "/images/future.svg",
+        content:
+          "Learning and self-development that is Continuous and provide programs that keep learners and professionals relevant ",
+      },
+      {
+        id: 4,
+        title: "Control",
+        logo: "/images/future.svg",
+        content:
+          "Empowering learners to take control of their learning journey through the course of their careers",
+      },
+      {
+        id: 5,
+        title: "Control section",
+        logo: "/images/future.svg",
+
+        content:
+          " self-development that is  and provide programs that keep learners and professionals relevant ",
+      },
+      {
+        id: 6,
+        title: "mangement",
+        logo: "/images/future.svg",
+        content: " Centered Coach and Instructor,  Maryville University",
+      },
+    ],
+  },
+];
+
+export const Enterpricontent = [
+  {
+    id: 1,
+    title: "Organisation partners",
+    mian: " Accreda growth building for Enterprise",
+    content:
+      "Get custom solutions for your enterprise’s challenges with Accreda’s FLY centric programs",
+    buttonname: "Learn More",
+    Image: "/images/enterprise_img.png",
+  },
+];
+

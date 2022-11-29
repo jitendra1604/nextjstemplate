@@ -41,7 +41,7 @@ export const Footer = () => {
                     xl={6}
                     md={6}
                   >
-                    <p>{main.content}</p>
+                    <p className={styles.list_section}>{main.content}</p>
                     <div className={styles.mailsection}>
                       <div>
                         <Image src={main.Image} width={24} height={24} alt="" />
@@ -119,6 +119,7 @@ export const Footer = () => {
                                   alt=""
                                   width={16}
                                   height={16}
+                                  className={styles.copy}
                                 />
                               )}
                             </div>
