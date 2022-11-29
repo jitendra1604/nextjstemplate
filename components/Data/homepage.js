@@ -133,3 +133,63 @@ export const Universitieslist = [
     ],
   },
 ];
+
+export const Futureplancontent = [
+  {
+    id: 1,
+    mian: "Forever-learning, Forever-growing that’s ",
+    mian1: " the future You!",
+    submain:
+      "Developed by world renowned academicians and global heuristics experts, in collaboration with leading universities.",
+
+    patnars: [
+      {
+        id: 2,
+        title: "Customization",
+        logo: "/images/future.svg",
+        content:
+          "Learning that is designed as per the learners unique needs and has a purposeful impact on employability outcomes",
+      },
+      {
+        id: 3,
+        title: "Continuity",
+        logo: "/images/future.svg",
+        content:
+          "Learning and self-development that is Continuous and provide programs that keep learners and professionals relevant ",
+      },
+      {
+        id: 4,
+        title: "Control",
+        logo: "/images/future.svg",
+        content:
+          "Empowering learners to take control of their learning journey through the course of their careers",
+      },
+      {
+        id: 5,
+        title: "Control section",
+        logo: "/images/future.svg",
+
+        content:
+          " self-development that is  and provide programs that keep learners and professionals relevant ",
+      },
+      {
+        id: 6,
+        title: "mangement",
+        logo: "/images/future.svg",
+        content: " Centered Coach and Instructor,  Maryville University",
+      },
+    ],
+  },
+];
+
+export const Enterpricontent = [
+  {
+    id: 1,
+    title: "Organisation partners",
+    mian: " Accreda growth building for Enterprise",
+    content:
+      "Get custom solutions for your enterprise’s challenges with Accreda’s FLY centric programs",
+    buttonname: "Learn More",
+    Image: "/images/enterprise_img.png",
+  },
+];

@@ -2,9 +2,14 @@
   text-align: center;
   padding-bottom: 50px;
   border-bottom: 1px solid #5c1a53;
+  @media (max-width: 767px) {
+    text-align: center;
+  }
   .footer_links {
     @media (max-width: 768px) {
       padding: 0px 20px;
+      display: flex;
+      flex-direction: column-reverse;
     }
   }
   h2 {
@@ -29,12 +34,27 @@
         display: grid;
         justify-content: left;
         padding: 0px 20px;
+        gap: 10px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: 49px;
+        grid-column-end: 1;
       }
       li {
+        @media (max-width: 468px) {
+          margin-right: 0px;
+        }
         list-style: none;
         margin-right: 40px;
         &:last-child {
           margin-right: 0px;
+          @media (max-width: 468px) {
+            margin-right: 0px;
+            grid-column-end: 1;
+            grid-column-start: 1;
+            grid-column-end: 4;
+            grid-row-end: 3;
+            text-align: center;
+          }
         }
       }
     }
@@ -43,6 +63,10 @@
     max-width: 352px;
     width: 100%;
     text-align: left;
+    &.list_section {
+      text-align: center;
+      max-width: unset;
+    }
   }
   ul {
     padding-left: 0px;
@@ -60,12 +84,16 @@
     .mailsection {
       @media (max-width: 768px) {
         position: relative;
+        justify-content: center;
       }
 
       bottom: 0;
       display: flex;
       p {
         margin-left: 10px;
+        @media (max-width: 468px) {
+          text-align: center !important;
+        }
       }
     }
   }
@@ -74,12 +102,29 @@
   .list {
     align-items: center;
     padding: 30px 0px;
+    @media (max-width: 468px) {
+      padding: 20px 0px 5px 0px;
+    }
     p {
       font-size: 12px;
       margin-bottom: 0px;
+      @media (max-width: 468px) {
+        display: none;
+      }
+    }
+
+    .copy {
+      @media (max-width: 468px) {
+        display: none;
+      }
     }
     .imge_section {
       text-align: center;
+      img {
+        @media (max-width: 468px) {
+          width: 30px;
+        }
+      }
     }
   }
 }

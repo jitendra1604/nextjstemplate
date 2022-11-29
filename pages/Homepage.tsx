@@ -1,6 +1,8 @@
 import React from "react";
 import Bannersection from "../components/homepage/Bannersection";
 import Career from "../components/homepage/Career";
+import Enterprise from "../components/homepage/Enterprise";
+import Futureplan from "../components/homepage/Futureplan";
 import Partnerslist from "../components/homepage/Partnerslist";
 import Programs from "../components/homepage/Programs";
 import { Universities } from "../components/homepage/Universities";
@@ -13,6 +15,8 @@ const Homepage = () => {
       <Programs />
       <Career />
       <Universities />
+      <Futureplan />
+      <Enterprise />
     </div>
   );
 };

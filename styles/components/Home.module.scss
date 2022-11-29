@@ -412,6 +412,135 @@
   }
 }
 
+.learing {
+  margin: 0px 80px;
+  @media (max-width: 767px) {
+    margin: 0px 20px;
+  }
+  .header_part {
+    max-width: 764px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 73px;
+    @media (max-width: 767px) {
+      margin-bottom: 20px;
+    }
+    h2 {
+      padding-bottom: 16px;
+      color: #611e58;
+      @media (max-width: 767px) {
+        font-size: 32px;
+      }
+      span {
+        color: #daa75b;
+      }
+    }
+    h5 {
+      font-family: "Manrope", sans-serif !important;
+      max-width: 666px;
+      margin: 0 auto;
+      @media (max-width: 767px) {
+        font-size: 14px;
+      }
+    }
+  }
+  .content {
+    margin-bottom: 150px;
+    text-align: center;
+    position: relative;
+    @media (max-width: 767px) {
+      box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+
+      &::after {
+        position: absolute;
+        background-image: url(/images/card_section_gray.png);
+        width: 100%;
+        content: "";
+        height: 400px;
+        right: 0px;
+        bottom: -25px;
+        z-index: -1;
+        box-shadow: 0 0 50px #ccc;
+      }
+      &::before {
+        position: absolute;
+        background-image: url(/images/card_section_gray.png);
+        width: 100%;
+        content: "";
+        height: 400px;
+        right: 0px;
+        bottom: -48px;
+        z-index: -1;
+        box-shadow: 0 0 50px #ccc;
+      }
+    }
+  }
+}
+
+.Enterprise_section {
+  position: relative;
+  background-color: #fcf7f7;
+  text-align: center;
+  &::after {
+    content: "";
+    background-image: url("/images/enterprise_bg.svg");
+    width: 100%;
+    max-width: 268.4px;
+    height: 187.14px;
+    position: absolute;
+    background-repeat: no-repeat;
+    bottom: 0px;
+    left: 0px;
+  }
+  &::before {
+    content: "";
+    background-image: url("/images/enterprise_bg1.svg");
+    width: 100%;
+    max-width: 163.4px;
+    height: 294.14px;
+    position: absolute;
+    background-repeat: no-repeat;
+    right: 0px;
+  }
+  padding: 60px 0px;
+  .border_line {
+    margin: 20px 0px;
+  }
+  .Enterprise_content {
+    max-width: 904px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    h4 {
+      color: #daa75b;
+    }
+
+    h2 {
+      color: #4c0e44;
+      max-width: 548px;
+      width: 100%;
+      margin: auto auto 24px auto;
+    }
+    p {
+      max-width: 333px;
+      margin: auto auto 32px auto;
+      font-size: 14px;
+    }
+    img {
+      position: relative;
+      margin-bottom: 40px;
+      &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 519px;
+        background-image: url("/images/gradiant.png");
+        top: 0px;
+      }
+    }
+  }
+}
+
 // End Home Page
 
 @media (max-width: 600px) {
