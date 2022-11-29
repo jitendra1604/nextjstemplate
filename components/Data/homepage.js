@@ -193,3 +193,35 @@ export const Enterpricontent = [
     Image: "/images/enterprise_img.png",
   },
 ];
+
+export const Faqdata = [
+  {
+    title: "Have questions?",
+    list_items: [
+      {
+        id: 1,
+        title: "What is F.L.Y?",
+        content:
+          "F.L.Y is reinventing the way we learn and grow.The platform teaches you what matters the most and is designed  to keep you employable in an exciting, ever-changing world.",
+      },
+      {
+        id: 2,
+        title: "Which classes are right for me?",
+        content:
+          "F.L.Y is reinventing the way we learn and grow.The platform teaches you what matters the most and is designed  to keep you employable in an exciting, ever-changing world.",
+      },
+      {
+        id: 3,
+        title: "What happens after my 30 day session is over?",
+        content:
+          "F.L.Y is reinventing the way we learn and grow.The platform teaches you what matters the most and is designed  to keep you employable in an exciting, ever-changing world.",
+      },
+      {
+        id: 4,
+        title: "What skill-level is required for the 30 day Sessions?",
+        content:
+          "F.L.Y is reinventing the way we learn and grow.The platform teaches you what matters the most and is designed  to keep you employable in an exciting, ever-changing world.",
+      },
+    ],
+  },
+];

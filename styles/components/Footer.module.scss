@@ -63,9 +63,11 @@
     max-width: 352px;
     width: 100%;
     text-align: left;
-    &.list_section {
-      text-align: center;
-      max-width: unset;
+    @media (max-width: 468px) {
+      &.list_section {
+        text-align: center;
+        max-width: unset;
+      }
     }
   }
   ul {
@@ -86,6 +88,7 @@
         position: relative;
         justify-content: center;
       }
+      position: absolute;
 
       bottom: 0;
       display: flex;

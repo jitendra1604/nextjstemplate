@@ -10,17 +10,28 @@ const Futureplan = () => {
     className: "center",
     centerMode: true,
     autoplay: true,
+    dots: false,
     infinite: true,
     centerPadding: "10px",
     slidesToShow: 3,
     speed: 500,
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1330,
         settings: {
           slidesToShow: 3,
+          centerMode: true,
+          autoplay: false,
           infinite: true,
-          dots: true,
+        },
+      },
+      {
+        breakpoint: 1020,
+        settings: {
+          slidesToShow: 2,
+          centerMode: false,
+          autoplay: false,
+          infinite: true,
         },
       },
       {

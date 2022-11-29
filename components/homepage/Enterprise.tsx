@@ -21,8 +21,14 @@ const Enterprise = () => {
               <h4>{data.title}</h4>
               <h2>{data.mian}</h2>
               <p>{data.content}</p>
-              <div>
-                <Image alt="" src={data.Image} width={904} height={519} />
+              <div className={styles.image_container}>
+                <Image
+                  alt=""
+                  src={data.Image}
+                  width={904}
+                  height={519}
+                  className={styles.image}
+                />
               </div>
               <a href="#" className="btn btn-border">
                 {data.buttonname}
