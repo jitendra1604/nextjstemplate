@@ -7,10 +7,10 @@ import logo from "../../../public/images/accreda-logo.png";
 import flyimg from "../../../public/images/fly_img.png";
 import flyicon from "../../../public/images/fly_icon.png";
 import benefiticon from "../../../public/images/benefit_icon.png";
-import announcement from "../../../public/images/announcement.png";
-import rightarrow from "../../../public/images/right-arrw.png";
+// import announcement from "../../../public/images/announcement.png";
+// import rightarrow from "../../../public/images/right-arrw.png";
 import styles from "./header.module.scss";
-import { Card, Col, Row } from "react-bootstrap";
+import { Col, Row } from "react-bootstrap";
 
 export const Header = () => {
   return (
@@ -59,7 +59,7 @@ export const Header = () => {
 
             <div className={styles.discover_cont}>
               <Nav.Link href="#link">Discover Programs</Nav.Link>
-              <div
+              {/* <div
                 className={`${styles.mega_menu_layout} ${styles.discover_content}`}
               >
                 <Row>
@@ -157,7 +157,7 @@ export const Header = () => {
                     </Row>
                   </Col>
                 </Row>
-              </div>
+              </div> */}
             </div>
             <Nav.Link href="#link">Enterprise Solutions</Nav.Link>
             <Nav.Link href="#link">About</Nav.Link>

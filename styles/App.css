@@ -1,6 +1,50 @@
+.wrapper {
+  overflow-x: hidden;
+}
 .react_player {
   width: 100%;
   max-width: 1062px;
   height: 478px !important;
   margin: 0 auto;
+}
+.max_323 {
+  max-width: 323px !important;
+  width: 100%;
+  font-size: 14px !important;
+  margin-bottom: 0px !important;
+}
+.slicksection {
+  font-family: "Playfair Display", serif;
+  margin-bottom: 12px !important;
+}
+:not(.btn-check) + .btn:active {
+  background-color: #dacdd8 !important;
+  border-color: #dacdd8 !important;
+}
+.rhombus {
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  position: relative;
+  width: 385px;
+  height: 534px;
+  left: 10px;
+  top: 10px;
+}
+
+.rhombus-parent {
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  width: 385px;
+  height: 534px;
+}
+
+@media only screen and (max-width: 767px) {
+  .rhombus {
+    width: 162px !important;
+    height: 226px !important;
+    margin: 0 auto !important;
+  }
+  .rhombus-parent {
+    width: 162px !important;
+    height: 226px !important;
+    margin: 0 auto !important;
+  }
 }

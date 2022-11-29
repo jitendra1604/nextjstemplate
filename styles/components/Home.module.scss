@@ -247,8 +247,7 @@
 .careercontent {
   margin: 0px 80px;
   @media (max-width: 767px) {
-    margin: 0px;
-    padding: 0px 15px;
+    margin: 0px 15px;
   }
   img {
     margin-bottom: 20px;
@@ -260,13 +259,16 @@
   h2 {
     color: #611e58;
     margin-bottom: 32px;
+    max-width: 386px;
+    width: 100%;
   }
   p {
-    &.p-primary {
-      margin-bottom: 30px;
-      color: #371032;
-    }
+    margin-bottom: 30px;
+    color: #371032;
+    max-width: 434px;
+    width: 100%;
   }
+
   a {
     text-decoration: underline;
     color: #5c1a53;
@@ -275,6 +277,8 @@
     margin-top: 56px;
     margin-bottom: 12px;
     color: #611e58;
+    max-width: 447px;
+    width: 100%;
   }
   .image_container {
     width: 100%;
@@ -287,6 +291,123 @@
       width: 100% !important;
       position: relative !important;
       height: unset !important;
+    }
+  }
+  form {
+    display: flex;
+    @media (max-width: 767px) {
+      margin: 80px 0px;
+    }
+    input {
+      height: 69.06px;
+      border-radius: 0px;
+      background-color: #dacdd8;
+      width: 420px;
+      @media (max-width: 767px) {
+        width: 100%;
+      }
+      &:focus {
+        box-shadow: none;
+        background-color: #dacdd8;
+        border-color: #dacdd8;
+      }
+    }
+    button {
+      background-image: url("/images/button.svg");
+      background-color: #dacdd8;
+      border: 0px;
+      border-color: #dacdd8;
+      padding: 18px 54px;
+      @media (max-width: 767px) {
+        padding: 18px 54px !important;
+      }
+      position: relative;
+      &::before {
+        position: absolute;
+        content: "";
+        background-image: url("/images/arrowimg.svg");
+        background-repeat: no-repeat;
+        width: 26px;
+        height: 67.06px;
+        top: 0px;
+        left: -25px;
+      }
+      &:active {
+        border: 0px;
+        background-color: #dacdd8;
+      }
+      &:focus {
+        border: 0px;
+        background-color: #dacdd8;
+      }
+      &:hover {
+        background-color: #dacdd8;
+        border: 0px;
+      }
+    }
+  }
+}
+
+.universiti {
+  margin: 100px 0px;
+  position: relative;
+  @media (max-width: 767px) {
+    margin: 60px 0px;
+    padding: 0px 15px;
+  }
+  .flex_list {
+    display: flex;
+  }
+  h2 {
+    color: #611e58;
+    max-width: 468px;
+    width: 100%;
+    margin: 80px auto;
+    text-align: center;
+    span {
+      color: #daa75b;
+    }
+    @media (max-width: 767px) {
+      font-size: 32px;
+      margin: 45px auto;
+    }
+  }
+  .emp_details {
+    max-width: 770px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    background-image: url("/images/slider_rambous.svg");
+    background-position: center 35%;
+    background-repeat: no-repeat;
+    @media (max-width: 767px) {
+      background-image: none !important;
+    }
+
+    p {
+      font-family: "Manrope", sans-serif !important;
+    }
+  }
+  .shaded1 {
+    position: absolute;
+    right: -98px;
+    z-index: -1;
+    img {
+      @media (max-width: 767px) {
+        width: 184px !important;
+        height: 256px !important;
+      }
+    }
+  }
+  .shaded {
+    position: absolute;
+    left: -98px;
+    z-index: -1;
+    img {
+      @media (max-width: 767px) {
+        width: 184px !important;
+        height: 256px !important;
+      }
     }
   }
 }
