@@ -178,6 +178,10 @@
       span {
         color: #daa75b;
       }
+      @media (max-width: 767px) {
+        font-size: 14px;
+        max-width: 249px;
+      }
     }
     .iframe_card {
       background-color: #611e58;
@@ -492,6 +496,11 @@
     background-repeat: no-repeat;
     bottom: 0px;
     left: 0px;
+    @media (max-width: 600px) {
+      bottom: -104px;
+      left: 0px;
+      background-size: 83px;
+    }
   }
   &::before {
     content: "";
@@ -502,6 +511,11 @@
     position: absolute;
     background-repeat: no-repeat;
     right: 0px;
+    @media (max-width: 600px) {
+      right: -63px;
+      background-size: 103px;
+      top: 50px;
+    }
   }
   padding: 60px 0px;
   .border_line {
@@ -521,6 +535,10 @@
       max-width: 548px;
       width: 100%;
       margin: auto auto 24px auto;
+      @media (max-width: 600px) {
+        font-size: 32px;
+        max-width: 341px;
+      }
     }
     p {
       max-width: 333px;
@@ -540,8 +558,67 @@
       }
     }
   }
+  .image_container {
+    width: 100%;
+    > div {
+      position: unset !important;
+    }
+
+    .image {
+      object-fit: contain;
+      width: 100% !important;
+      position: relative !important;
+      height: unset !important;
+    }
+  }
 }
 
+.Faqcontent {
+  max-width: 663px;
+  margin: 100px auto;
+  @media (max-width: 600px) {
+    padding: 0px 20px;
+    text-align: center;
+  }
+
+  img {
+    @media (max-width: 600px) {
+      text-align: center;
+    }
+    &.border_line {
+      margin: 30px 0px;
+    }
+  }
+  h2 {
+    &.header_title {
+      margin-bottom: 60px;
+      color: #5c1a53;
+      @media (max-width: 600px) {
+        font-size: 32px;
+        text-align: center;
+        margin-bottom: 30px;
+      }
+    }
+  }
+  .flex_section {
+    display: flex;
+    align-items: center;
+    color: #5c1a53;
+
+    h4 {
+      margin-bottom: 0px;
+      @media (max-width: 600px) {
+        font-size: 18px;
+      }
+    }
+    img {
+      margin-right: 17px;
+      &.border_line {
+        margin: 30px 0px;
+      }
+    }
+  }
+}
 // End Home Page
 
 // contempary - start
@@ -581,7 +658,7 @@
     }
     .nav_item{
       position: relative;
-      a{
+      a {
         padding: 5px 0;
         color: $color-white;
         font-size: 18px;
@@ -594,8 +671,8 @@
         }
       }
     }
-    .nav_item::after{
-      content: '';
+    .nav_item::after {
+      content: "";
       background-image: url(../../public/images/empty_diamond.png);
       background-position: center;
       background-repeat: no-repeat;
@@ -610,15 +687,15 @@
         right: 5px;
       }
     }
-    .nav_item:last-child{
+    .nav_item:last-child {
       margin-right: 0;
     }
-    .nav_item:last-child::after{
+    .nav_item:last-child::after {
       background-image: none;
     }
   }
-  .contempary_tab_content{
-    h6{
+  .contempary_tab_content {
+    h6 {
       font-size: 24px;
       color: $color-white;
       font-family: "Playfair Display", serif;
@@ -633,7 +710,7 @@
         display: block;
       }
     }
-    p{
+    p {
       color: $color-white;
       font-size: 14px;
       font-weight: 300;

@@ -11,6 +11,7 @@ import { ContemBoosterData } from '../Data/homepage'
 
 const Contempary = () => {
 
+
     const settings = {
       dots: false,
       infinite: true,
@@ -150,7 +151,7 @@ const Contempary = () => {
             <Image src={Contem3} alt="contem-img"/>
         </div>
     </section>
-  )
-}
+  );
+};
 
-export default Contempary
+export default Contempary;

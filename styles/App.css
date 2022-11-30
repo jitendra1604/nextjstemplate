@@ -80,7 +80,31 @@
   margin: 38px auto;
 }
 .slick-slider .slick-list {
-  padding: 0px;
+  padding: 0px !important;
+}
+.Faqsec .accordion-button {
+  border: 0px !important;
+  padding: 30px 0px !important;
+}
+.Faqsec .accordion-item {
+  border: 0px !important;
+}
+.Faqsec .accordion-header {
+  border-bottom: 1px solid rgba(92, 26, 83, 0.2);
+  margin-bottom: 30px;
+}
+.Faqsec .accordion-button:not(.collapsed) {
+  background-color: transparent;
+}
+.Faqsec .accordion-button:focus {
+  box-shadow: none;
+}
+.Faqsec .accordion-button::after {
+  background-image: url("/Images/accordanimg.svg");
+  width: 17.49px;
+  height: 12.49px;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .contem_tabs .nav-link.active{
   opacity: 1 !important;
@@ -145,5 +169,24 @@
     .card_section {
     background-color: #fcf7f7;
     color: #651056;
+  }
+  .Faqsec .accordion-body {
+    text-align: left;
+    font-size: 12px;
+  }
+  .Faqsec .accordion-header {
+    margin-bottom: 0px;
+  }
+  .Faqsec .accordion-button::after {
+    background-size: 14px;
+  }
+}
+
+@media screen and (min-width: 998px) and (max-width: 1094px) {
+  .learing_sec .card_section .card-body .card_body_content {
+    position: absolute;
+    padding: 0px 20px;
+    bottom: 86px;
+    left: 0px;
   }
 }
