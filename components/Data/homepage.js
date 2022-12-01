@@ -81,79 +81,75 @@ export const Carrercontent = [
   },
 ];
 
+export const ContemSignData = [
+  {
+    id: "1",
+    img: "",
+    title: "Digital Marketing",
+    para: "A Postgraduate program that helps you master the digital marketing domain.",
+    foot1: "Offered By: Maryville University",
+    foot2: "Duration: 12 Months",
+  },
+  {
+    id: "2",
+    img: "",
+    title: "Leadership",
+    para: "A Postgraduate program that helps you master the digital marketing domain.",
+    foot1: "Offered By: Maryville University",
+    foot2: "Duration: 12 Months",
+  },
+  {
+    id: "3",
+    img: "",
+    title: "Business Acumen",
+    para: "A Postgraduate program that helps you master the digital marketing domain.",
+    foot1: "Offered By: Maryville University",
+    foot2: "Duration: 12 Months",
+  },
+  {
+    id: "4",
+    img: "",
+    title: "Business Acumen",
+    para: "A Postgraduate program that helps you master the digital marketing domain.",
+    foot1: "Offered By: Maryville University",
+    foot2: "Duration: 12 Months",
+  },
+];
 
-
-
-    export const ContemSignData = [
-        {
-            id:'1',
-            img: "",
-            title: "Digital Marketing",
-            para: "A Postgraduate program that helps you master the digital marketing domain.",
-            foot1: "Offered By: Maryville University",
-            foot2: "Duration: 12 Months",
-        },
-        {
-            id:'2',
-            img: "",
-            title: "Leadership",
-            para: "A Postgraduate program that helps you master the digital marketing domain.",
-            foot1: "Offered By: Maryville University",
-            foot2: "Duration: 12 Months",
-        },
-        {
-            id:'3',
-            img: "",
-            title: "Business Acumen",
-            para: "A Postgraduate program that helps you master the digital marketing domain.",
-            foot1: "Offered By: Maryville University",
-            foot2: "Duration: 12 Months",
-        },
-        {
-            id:'4',
-            img: "",
-            title: "Business Acumen",
-            para: "A Postgraduate program that helps you master the digital marketing domain.",
-            foot1: "Offered By: Maryville University",
-            foot2: "Duration: 12 Months",
-        },
-    ]
-
-    export const ContemBoosterData = [
-        {
-            id:'1',
-            img: "",
-            title: "Digital Marketing",
-            para: "A Postgraduate program that helps you master the digital marketing domain.",
-            foot1: "Offered By: Maryville University",
-            foot2: "Duration: 12 Months",
-        },
-        {
-            id:'2',
-            img: "",
-            title: "Leadership",
-            para: "A Postgraduate program that helps you master the digital marketing domain.",
-            foot1: "Offered By: Maryville University",
-            foot2: "Duration: 12 Months",
-        },
-        {
-            id:'3',
-            img: "",
-            title: "Business Acumen",
-            para: "A Postgraduate program that helps you master the digital marketing domain.",
-            foot1: "Offered By: Maryville University",
-            foot2: "Duration: 12 Months",
-        },
-        {
-            id:'4',
-            img: "",
-            title: "Business Acumen",
-            para: "A Postgraduate program that helps you master the digital marketing domain.",
-            foot1: "Offered By: Maryville University",
-            foot2: "Duration: 12 Months",
-        },
-    ]
-
+export const ContemBoosterData = [
+  {
+    id: "1",
+    img: "",
+    title: "Digital Marketing",
+    para: "A Postgraduate program that helps you master the digital marketing domain.",
+    foot1: "Offered By: Maryville University",
+    foot2: "Duration: 12 Months",
+  },
+  {
+    id: "2",
+    img: "",
+    title: "Leadership",
+    para: "A Postgraduate program that helps you master the digital marketing domain.",
+    foot1: "Offered By: Maryville University",
+    foot2: "Duration: 12 Months",
+  },
+  {
+    id: "3",
+    img: "",
+    title: "Business Acumen",
+    para: "A Postgraduate program that helps you master the digital marketing domain.",
+    foot1: "Offered By: Maryville University",
+    foot2: "Duration: 12 Months",
+  },
+  {
+    id: "4",
+    img: "",
+    title: "Business Acumen",
+    para: "A Postgraduate program that helps you master the digital marketing domain.",
+    foot1: "Offered By: Maryville University",
+    foot2: "Duration: 12 Months",
+  },
+];
 
 export const Universitieslist = [
   {
