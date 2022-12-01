@@ -12,11 +12,11 @@ import rightarrow from "../../../public/images/right-arrw.png";
 import downarrow from "../../../public/images/down-arrow.png";
 import flyiconvio from "../../../public/images/fly_vio.png";
 import styles from "./header.module.scss";
-import { Button, Card, Col, Row, Tab } from "react-bootstrap";
+import { Button, Card, Col, Offcanvas, Row, Tab } from "react-bootstrap";
 
 export const Header = () => {
   return (
-    <Navbar className={styles.header} expand="lg">
+    <Navbar className={`${styles.header} header_resp`} expand="lg">
       <Container>
         <Navbar.Brand href="#home">
           <Image src={logo} alt="Logo" />
@@ -416,6 +416,24 @@ export const Header = () => {
             </div>
           </Nav>
           <Button className={styles.outline_btn}>Log in</Button>
+
+          {/* <Navbar.Offcanvas
+              id={`offcanvasNavbar-expand-${expand}`}
+              aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
+              placement="end"
+            >
+              <Offcanvas.Header closeButton>
+                <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
+                  Offcanvas
+                </Offcanvas.Title>
+              </Offcanvas.Header>
+              <Offcanvas.Body>
+                <Nav className="justify-content-end flex-grow-1 pe-3">
+                  <Nav.Link href="#action1">Home</Nav.Link>
+                  <Nav.Link href="#action2">Link</Nav.Link>
+                </Nav>
+              </Offcanvas.Body>
+            </Navbar.Offcanvas> */}
         </Navbar.Collapse>
       </Container>
     </Navbar>

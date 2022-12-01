@@ -1,6 +1,7 @@
 .wrapper {
   overflow-x: hidden;
 }
+
 .react_player {
   width: 100%;
   max-width: 1062px;
@@ -135,6 +136,30 @@
   content: '';
 }
 
+@media only screen and (max-width: 991px){
+  .header_resp .navbar-brand{
+    padding: 0 15px;
+  }
+  .header_resp .navbar-toggler{
+    border: none;
+  }
+  .header_resp .navbar-toggler:focus{
+    box-shadow: none;
+  }
+  .header_resp .navbar-toggler.collapsed .navbar-toggler-icon{
+    background-image: url(../public/images/humberger_menu.png);
+    background-size: 24px;
+  }
+  .header_resp .navbar-toggler .navbar-toggler-icon{
+    background-image: url(../public/images/close_icon.png);
+    background-size: 24px;
+  }
+
+  .header_resp{
+    border-bottom: 1px solid #5C1A53;
+  }
+}
+
 @media only screen and (max-width: 768px) {
   .contem_slider .slick-prev{left: -10px;}
   .contem_slider .slick-next{right: -10px;}
@@ -180,6 +205,24 @@
   .Faqsec .accordion-button::after {
     background-size: 14px;
   }
+
+  .header_resp .container{
+    justify-content: flex-end;
+  }
+  .header_resp{
+    position: relative;
+  }
+  .header_resp .navbar-brand{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 18px;
+  }
+  .header_resp .navbar-brand img{
+    height: 32px;
+    width: 155px;
+  }
+  
 }
 
 @media screen and (min-width: 998px) and (max-width: 1094px) {
