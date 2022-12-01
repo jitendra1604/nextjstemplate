@@ -12,7 +12,7 @@ import rightarrow from "../../../public/images/right-arrw.png";
 import downarrow from "../../../public/images/down-arrow.png";
 import flyiconvio from "../../../public/images/fly_vio.png";
 import styles from "./header.module.scss";
-import { Button, Card, Col, Offcanvas, Row, Tab } from "react-bootstrap";
+import { Button, Card, Col, Row, Tab } from "react-bootstrap";
 
 export const Header = () => {
   return (

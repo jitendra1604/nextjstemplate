@@ -111,10 +111,10 @@
 
 // Home page
 .bannersec {
-    height: calc(100vh - 98px);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  height: calc(100vh - 98px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   @media (max-width: 767px) {
     padding: 0px 15px;
   }
