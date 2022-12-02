@@ -19,8 +19,21 @@ export const Partnerlist = [
     Image: "/images/social_media.svg",
     title: "Self-management ",
     title2: "is one of the top skills required for careers at Google",
-    sub: "And, we have that covered in ",
-    sub1: "our program.",
+    sub: "And, we have that covered in our program.",
+  },
+  {
+    id: 1,
+    Image: "/images/applelogo.svg",
+    title: "Self-management ",
+    title2: "is one of the top skills required for careers at Google",
+    sub: "And, we have that covered in our program.",
+  },
+  {
+    id: 1,
+    Image: "/images/microsoftlogo.svg",
+    title: "Self-management ",
+    title2: "is one of the top skills required for careers at Google",
+    sub: "And, we have that covered in our program.",
   },
 ];
 export const Programslist = [
@@ -216,7 +229,7 @@ export const Futureplancontent = [
       {
         id: 2,
         title: "Customization",
-        logo: "/images/future.svg",
+        logo: "/images/future1.svg",
         content:
           "Learning that is designed as per the learners unique needs and has a purposeful impact on employability outcomes",
       },
@@ -230,7 +243,7 @@ export const Futureplancontent = [
       {
         id: 4,
         title: "Control",
-        logo: "/images/future.svg",
+        logo: "/images/future2.svg",
         content:
           "Empowering learners to take control of their learning journey through the course of their careers",
       },
@@ -245,7 +258,7 @@ export const Futureplancontent = [
       {
         id: 6,
         title: "mangement",
-        logo: "/images/future.svg",
+        logo: "/images/future1.svg",
         content: " Centered Coach and Instructor,  Maryville University",
       },
     ],

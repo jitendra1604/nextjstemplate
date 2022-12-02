@@ -40,8 +40,6 @@ const Futureplan = () => {
           slidesToShow: 1,
           slidesToScroll: 1,
           initialSlide: 1,
-          vertical: true,
-          verticalSwiping: true,
         },
       },
       {

@@ -111,10 +111,30 @@
 
 // Home page
 .bannersec {
-  height: calc(100vh - 98px);
+  // height: calc(100vh - 98px);
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
+  &::after {
+    content: "";
+    background-image: url("../../public/images/banner_gray.svg");
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 0;
+    width: 342.19px;
+    height: 375px;
+  }
+  &::before {
+    content: "";
+    background-image: url("../../public/images/banner_gray2.svg");
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: -182px;
+    right: 0px;
+    width: 150px;
+    height: 375px;
+  }
   @media (max-width: 767px) {
     padding: 0px 15px;
   }
@@ -234,19 +254,21 @@
     }
   }
   img {
-    margin-bottom: 0px;
+    margin: 0 auto;
   }
 
   h6 {
     max-width: 552px;
     width: 100%;
     margin: 20px auto;
-    color: #5c1a53;
+    color: #5c1a53 !important;
+    font-family: "Playfair Display", serif !important;
+
     @media (max-width: 767px) {
       font-size: 20px;
     }
     span {
-      color: #371032;
+      color: #371032 !important;
     }
   }
   p {
@@ -553,7 +575,7 @@
       margin: auto auto 32px auto;
       font-size: 14px;
     }
-    img {
+    .image_container {
       position: relative;
       margin-bottom: 40px;
       &::after {
@@ -561,8 +583,9 @@
         position: absolute;
         width: 100%;
         height: 519px;
-        background-image: url("/images/gradiant.png");
+        background-image: url("/images/gray_shade.svg");
         top: 0px;
+        left: 0px;
       }
     }
   }
