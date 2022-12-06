@@ -31,7 +31,7 @@ const Bannersection = () => {
             </div>
           );
         })}
-        </div>
+      </div>
     </section>
   );
 };
