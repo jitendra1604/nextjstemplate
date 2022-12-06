@@ -137,6 +137,20 @@
   content: "";
 }
 
+.header_resp .nav-link.active{
+  color: #5C1A53;
+  /* border-bottom: none; */
+}
+
+.mg_menu, .discover_menu, .accerdasign_menu, .fly_menu{
+  right: -100%;
+}
+
+.mg_menu.active, .discover_menu.active, .accerdasign_menu.active, .fly_menu.active{
+  right: 0;
+}
+
+
 @media only screen and (max-width: 991px){
   .header_resp .navbar-brand{
     padding: 0 15px;

@@ -1696,6 +1696,11 @@ queue-microtask@^1.2.2:
   resolved "https://registry.yarnpkg.com/queue-microtask/-/queue-microtask-1.2.3.tgz#4929228bbc724dfac43e0efb058caf7b6cfb6243"
   integrity sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==
 
+react-bootstrap-drawer@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/react-bootstrap-drawer/-/react-bootstrap-drawer-1.0.1.tgz#244050321b22cffc2d001c44e153f1b4d84a1685"
+  integrity sha512-OU1MZf4fpdkq1lil19MiA2nHbIv+aFn6YMQN+j0kFEfs+9YZRztJ5+o8E7HADyFhGIPXzq/MWcQvHS58cnWWmA==
+
 react-bootstrap@^2.6.0:
   version "2.6.0"
   resolved "https://registry.yarnpkg.com/react-bootstrap/-/react-bootstrap-2.6.0.tgz#bd125889cc9d2bbd7c89334a7c54980ff0a65b94"
