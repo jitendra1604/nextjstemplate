@@ -24,7 +24,6 @@ const Programs = () => {
                   </div>
                 }
                 light={data.Image}
-                playing
                 controls
               />
               <div className={styles.iframe_card}>

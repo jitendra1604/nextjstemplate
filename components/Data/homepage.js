@@ -39,7 +39,7 @@ export const Partnerlist = [
 export const Programslist = [
   {
     id: 1,
-    Image: "/images/Iframe.png",
+    Image: "/images/Iframe.webp",
     title: "Go beyond just programs, develop  ",
     title1: "employability",
     title2: "skills, learn holistically.",
@@ -93,6 +93,7 @@ export const Carrercontent = [
     ],
   },
 ];
+// Contem
 
 export const ContemSignData = [
   {
@@ -163,6 +164,8 @@ export const ContemBoosterData = [
     foot2: "Duration: 12 Months",
   },
 ];
+
+// Contem
 
 export const Universitieslist = [
   {
