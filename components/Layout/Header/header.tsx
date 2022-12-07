@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -13,8 +13,12 @@ import downarrow from "../../../public/images/down-arrow.png";
 import flyiconvio from "../../../public/images/fly_vio.png";
 import styles from "./header.module.scss";
 import { Button, Card, Col, Row, Tab } from "react-bootstrap";
+import Signin from "../../Modals/Signinmodal/Signin";
 
 export const Header = () => {
+  const [show, setShow] = useState(false);
+  const handleShow = () => setShow(true);
+  const handleClose = () => setShow(false);
   return (
     <Navbar className={`${styles.header} header_resp`} expand="lg">
       <Container>
@@ -415,7 +419,10 @@ export const Header = () => {
               </div>
             </div>
           </Nav>
-          <Button className={styles.outline_btn}>Log in</Button>
+          <Button className={styles.outline_btn} onClick={handleShow}>
+            Log in
+          </Button>
+          <Signin show={show} onClose={handleClose} />
 
           {/* <Navbar.Offcanvas
               id={`offcanvasNavbar-expand-${expand}`}

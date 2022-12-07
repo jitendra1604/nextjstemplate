@@ -1,0 +1,64 @@
+.modal {
+  .modal-header {
+    width: 100%;
+    margin: 0 auto;
+    justify-content: center;
+    border-bottom: 0px;
+    .modal-title {
+      text-align: center;
+    }
+    .btn-close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      &:focus {
+        box-shadow: none;
+      }
+    }
+  }
+  .modal-body {
+    max-width: 410px;
+    width: 100%;
+    margin: 0 auto;
+    .form-control {
+      border: 0px;
+      border-bottom: 2px solid #5c1a53;
+      border-radius: 0px;
+      padding: 18px 30px;
+      font-family: "Playfair Display", serif;
+      font-weight: 500;
+
+      &:focus {
+        box-shadow: none;
+      }
+      &::-webkit-input-placeholder {
+        color: #5c1a53;
+        opacity: 0.5;
+      }
+    }
+    Button {
+      margin-top: 79px;
+      text-align: center;
+      width: 100%;
+      &:disabled {
+        background-color: #5c1a53;
+        opacity: 0.5;
+        border-color: transparent;
+      }
+    }
+  }
+}
+
+img {
+  &.socialmedia {
+    position: relative;
+    margin-right: 25px;
+    &::before {
+      content: "";
+      border-right: 1px solid #5c1a53;
+      height: 28px;
+      position: absolute;
+      right: 0px;
+    }
+  }
+}

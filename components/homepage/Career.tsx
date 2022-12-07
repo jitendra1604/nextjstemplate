@@ -1,5 +1,6 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
+// import Lottie from "react-lottie";
 import { Carrercontent } from "../Data/homepage";
 import Borderimg from "../../public/images/footerborder.svg";
 import Image from "next/image";
@@ -7,6 +8,8 @@ import styles from "../../styles/components/Home.module.scss";
 import Slider from "react-slick";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
+// import animationData from "../../public/animate/Frame_1.json";
+// import animationData1 from "../../public/animate/Full_Frame.json";
 
 const settings = {
   dots: false,
@@ -17,7 +20,22 @@ const settings = {
   slidesToScroll: 1,
   autoplay: true,
 };
-
+// const defaultOptions = {
+//   loop: true,
+//   autoplay: true,
+//   animationData: animationData,
+//   rendererSettings: {
+//     preserveAspectRatio: "xMidYMid slice",
+//   },
+// };
+// const defaultOptions1 = {
+//   loop: true,
+//   autoplay: true,
+//   animationData: animationData1,
+//   rendererSettings: {
+//     preserveAspectRatio: "xMidYMid slice",
+//   },
+// };
 function Career() {
   return (
     <section className={styles.careercontent}>
@@ -55,6 +73,9 @@ function Career() {
             </Form>
           </Col>
           <Col sm={6}>
+            {/* <Lottie options={defaultOptions} /> */}
+            {/* <Lottie options={defaultOptions1} /> */}
+
             {Carrercontent.map((data, index) => {
               return (
                 <div key={data.id}>
