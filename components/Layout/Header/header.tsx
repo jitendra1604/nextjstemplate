@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { useRef } from "react";
+import React from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -9,8 +11,11 @@ import flyicon from "../../../public/images/fly_icon.png";
 import benefiticon from "../../../public/images/benefit_icon.png";
 import announcement from "../../../public/images/announcement.png";
 import rightarrow from "../../../public/images/right-arrw.png";
+import rytarrow from "../../../public/images/ryt_arrw.png";
 import downarrow from "../../../public/images/down-arrow.png";
 import flyiconvio from "../../../public/images/fly_vio.png";
+import leftarrow from "../../../public/images/left_arrw_header.png";
+import flyMenuIcon from "../../../public/images/fly_m_icon.png";
 import styles from "./header.module.scss";
 import { Button, Card, Col, Row, Tab } from "react-bootstrap";
 import Signin from "../../Modals/Signinmodal/Signin";
@@ -19,6 +24,59 @@ export const Header = () => {
   const [show, setShow] = useState(false);
   const handleShow = () => setShow(true);
   const handleClose = () => setShow(false);
+  const showAboutopt = useRef<any>(undefined);
+  const showDisvoveropt = useRef<any>(undefined);
+  const showAccredaSignopt = useRef<any>(undefined);
+  const showFlyopt = useRef<any>(undefined);
+
+  const showAboutMenu = () => {
+    if (showAboutopt.current !== undefined) {
+      showAboutopt.current.classList.add("active");
+    }
+  };
+
+  const hideAboutMenufn = () => {
+    if (showAboutopt.current !== undefined) {
+      showAboutopt.current.classList.remove("active");
+    }
+  };
+
+  const showDiscoverMenu = () => {
+    if (showDisvoveropt.current !== undefined) {
+      showDisvoveropt.current.classList.add("active");
+    }
+  };
+
+  const hideDiscoverMenufn = () => {
+    if (showDisvoveropt.current !== undefined) {
+      showDisvoveropt.current.classList.remove("active");
+    }
+  };
+
+  const showAccerdaSignMenu = () => {
+    if (showAccredaSignopt.current !== undefined) {
+      showAccredaSignopt.current.classList.add("active");
+    }
+  };
+
+  const hideAccredaSignMenufn = () => {
+    if (showAccredaSignopt.current !== undefined) {
+      showAccredaSignopt.current.classList.remove("active");
+    }
+  };
+
+  const showFlyMenu = () => {
+    if (showFlyopt.current !== undefined) {
+      showFlyopt.current.classList.add("active");
+    }
+  };
+
+  const hideFlyMenufn = () => {
+    if (showFlyopt.current !== undefined) {
+      showFlyopt.current.classList.remove("active");
+    }
+  };
+
   return (
     <Navbar className={`${styles.header} header_resp`} expand="lg">
       <Container>
@@ -29,7 +87,7 @@ export const Header = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className={`${styles.sectionlist} mx-auto`}>
             <div className={` ${styles.fly_cont} mx-md-3`}>
-              <Nav.Link href="#home">
+              <Nav.Link href="#home" onClick={() => showFlyMenu()}>
                 FLY
                 <span className="ms-2">
                   <Image src={downarrow} alt="down-arrow" />
@@ -69,7 +127,7 @@ export const Header = () => {
             </div>
 
             <div className={`${styles.discover_cont} mx-md-3`}>
-              <Nav.Link href="#link">
+              <Nav.Link href="#link" onClick={() => showDiscoverMenu()}>
                 Discover Programs
                 <span className="ms-2">
                   <Image src={downarrow} alt="down-arrow" />
@@ -308,7 +366,7 @@ export const Header = () => {
               <Nav.Link href="#link">Enterprise Solutions</Nav.Link>
             </div>
             <div className={` ${styles.about_cont} mx-md-3`}>
-              <Nav.Link href="#link">
+              <Nav.Link href="#link" onClick={() => showAboutMenu()}>
                 About
                 <span className="ms-2">
                   <Image src={downarrow} alt="down-arrow" />
@@ -443,6 +501,276 @@ export const Header = () => {
             </Navbar.Offcanvas> */}
         </Navbar.Collapse>
       </Container>
+      <div
+        className={`${styles.sliding_modal} ${styles.fly_slide} fly_menu`}
+        ref={showFlyopt}
+      >
+        <div className={styles.modal_heading}>
+          <h4>
+            <span>
+              <Image
+                src={leftarrow}
+                alt="left-arrow"
+                onClick={() => hideFlyMenufn()}
+              />
+            </span>
+            Fly
+          </h4>
+        </div>
+        <div className={styles.fly_media}>
+          <figure>
+            <Image src={flyMenuIcon} alt="fly-icon" />
+          </figure>
+          <div className="align-self-center">
+            <h5>Forever Learning and You</h5>
+            <p>Accreda’s proprietary career building platform.</p>
+          </div>
+        </div>
+        <ul className={` ${styles.fly_list} list-unstyled`}>
+          <li>
+            <a href="#">
+              What is FLY?{" "}
+              <span>
+                <Image src={rytarrow} alt="right-arrow" />
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              Benefits of FLY{" "}
+              <span>
+                <Image src={rytarrow} alt="right-arrow" />
+              </span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div
+        className={`${styles.sliding_modal} ${styles.discover_slide} discover_menu`}
+        ref={showDisvoveropt}
+      >
+        <div className={styles.modal_heading}>
+          <h4>
+            <span>
+              <Image
+                src={leftarrow}
+                alt="left-arrow"
+                onClick={() => hideDiscoverMenufn()}
+              />
+            </span>
+            Discover Programs
+          </h4>
+        </div>
+        <Row className={styles.about_row}>
+          <Col md={6} sm={6} xs={12} className="px-4">
+            <div className={styles.about_cards}>
+              <h5>By Program</h5>
+            </div>
+            <ul className="list-unstyled">
+              <li>
+                <a href="#" onClick={() => showAccerdaSignMenu()}>
+                  Accreda Signature Program
+                  <span className="ms-2">
+                    <Image src={downarrow} alt="down-arrow" />
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Accreda Booster Program
+                  <span className="ms-2">
+                    <Image src={downarrow} alt="down-arrow" />
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </Col>
+          <Col md={6} sm={6} xs={12} className="px-4">
+            <div className={styles.about_cards}>
+              <h5>By Type</h5>
+            </div>
+            <ul className="list-unstyled">
+              <li>
+                <a href="#">
+                  Post Graduate Program
+                  <span className="ms-2">
+                    <Image src={downarrow} alt="down-arrow" />
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Certificate Program
+                  <span className="ms-2">
+                    <Image src={downarrow} alt="down-arrow" />
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </Col>
+          <Col md={6} sm={6} xs={12} className="px-4">
+            <div className={styles.about_cards}>
+              <h5>By Employability Skills</h5>
+            </div>
+            <ul className="list-unstyled">
+              <li>
+                <a href="#">
+                  Problem Solving
+                  <span className="ms-2">
+                    <Image src={downarrow} alt="down-arrow" />
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Self-Management
+                  <span className="ms-2">
+                    <Image src={downarrow} alt="down-arrow" />
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Working With People
+                  <span className="ms-2">
+                    <Image src={downarrow} alt="down-arrow" />
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Systems Thinking
+                  <span className="ms-2">
+                    <Image src={downarrow} alt="down-arrow" />
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Technology Use
+                  <span className="ms-2">
+                    <Image src={downarrow} alt="down-arrow" />
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </Col>
+        </Row>
+      </div>
+
+      <div
+        className={`${styles.sliding_modal} ${styles.accredaSign} accerdasign_menu`}
+        ref={showAccredaSignopt}
+      >
+        <div className={styles.modal_heading}>
+          <h4>
+            <span>
+              <Image
+                src={leftarrow}
+                alt="left-arrow"
+                onClick={() => hideAccredaSignMenufn()}
+              />
+            </span>
+            Accreda Signature Program
+          </h4>
+        </div>
+        <div className={`${styles.tostmessage} ${styles.violet_bg}`}>
+          <p>
+            The Accreda Booster Program are byte sized / micro-skills
+            acquisition programs that lead to proficiency in one defined area.
+            These are short term programs and typically take between 2 and 4
+            weeks for completion.
+          </p>
+        </div>
+        <div className={` ${styles.our_prog} `}>
+          <figure>
+            <Image src={flyiconvio} alt="fly-icon" />
+          </figure>
+          <div>
+            <h5>Our Programs</h5>
+            <span>Powered by FLY</span>
+          </div>
+        </div>
+        <ul className="list-unstyled d-flex flex-wrap">
+          <li className="col-md-6 col-sm-6 col-6">
+            <a href="#">Digital Marketing</a>
+          </li>
+          <li className="col-md-6 col-sm-6 col-6">
+            <a href="#">Business Acumen</a>
+          </li>
+          <li className="col-md-6 col-sm-6 col-6">
+            <a href="#">Leadership</a>
+          </li>
+          <li className="col-md-6 col-sm-6 col-6">
+            <a href="#">Project Management</a>
+          </li>
+          <li className="col-md-6 col-sm-6 col-6">
+            <a href="#">Professional Skills</a>
+          </li>
+        </ul>
+      </div>
+
+      <div className={`${styles.sliding_modal} mg_menu`} ref={showAboutopt}>
+        <div className={styles.modal_heading}>
+          <h4>
+            <span>
+              <Image
+                src={leftarrow}
+                alt="left-arrow"
+                onClick={() => hideAboutMenufn()}
+              />
+            </span>
+            About
+          </h4>
+        </div>
+        <Row className={styles.about_row}>
+          <Col md={6} sm={6} xs={6} className="px-4">
+            <div className={styles.about_cards}>
+              <h5>About Us</h5>
+            </div>
+          </Col>
+          <Col md={6} sm={6} xs={6} className="px-4">
+            <div className={styles.about_cards}>
+              <h5>FAQ</h5>
+            </div>
+          </Col>
+          <Col md={6} sm={6} xs={6} className="px-4">
+            <div className={styles.about_cards}>
+              <h5>Contact Us</h5>
+            </div>
+          </Col>
+          <Col md={6} sm={6} xs={6} className="px-4">
+            <div className={styles.about_cards}>
+              <h5>Resources</h5>
+            </div>
+          </Col>
+        </Row>
+        <Row className={styles.annouce_row}>
+          <Col md={6} sm={6} xs={6}>
+            <h5>Announcement</h5>
+            <a href="#">
+              <div className="d-flex">
+                Read more
+                <span>
+                  <Image src={rytarrow} alt="right-arrow" />
+                </span>
+              </div>
+            </a>
+          </Col>
+          <Col md={6} sm={6} xs={6}>
+            <h5>Research Paper</h5>
+            <a href="#">
+              <div className="d-flex">
+                Read more
+                <span>
+                  <Image src={rytarrow} alt="right-arrow" />
+                </span>
+              </div>
+            </a>
+          </Col>
+        </Row>
+      </div>
     </Navbar>
   );
 };
