@@ -125,7 +125,7 @@ const Signin = (props: any) => {
                 autoComplete="off"
                 // onFocus={() => setMeter(true)}
                 // value={password}
-                type="number"
+                type="password"
                 name="password"
                 // type={passwordShown ? "text" : "password"}
                 onChange={handleChange}
@@ -149,7 +149,7 @@ const Signin = (props: any) => {
                 </div>
               )} */}
               <Form.Control
-                type="text"
+                type="password"
                 name="ConPassword"
                 placeholder="Confirm Password"
                 autoComplete="off"
