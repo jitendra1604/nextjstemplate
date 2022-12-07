@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import Image from "next/image";
@@ -9,25 +9,62 @@ import styles from "../../../styles/components/Modalpop.module.scss";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-// const onFormSubmit = (e: any) => {
-//   e.preventDefault();
-//   const formData = new FormData(e.target),
-//     formDataObj = Object.fromEntries(formData.entries());
-//   console.log(formDataObj);
-// };
+import Link from "next/link";
 
 const Signin = (props: any) => {
   const { show, onClose } = props;
-  const [fname, setFName] = useState("");
-  const [lname, setLName] = useState("");
-  const [email, setEmail] = useState("");
-  const [pass, setPass] = useState("");
-  const [conpass, setConpass] = useState("");
-  const validate = () => {
-    return (
-      fname.length & lname.length & email.length & pass.length & conpass.length
-    );
+  const [data, setData] = useState({
+    fname: "",
+    lname: "",
+    email: "",
+    password: "",
+    ConPassword: "",
+  });
+  const [isValid, setIsValid] = useState(false);
+
+  const handleSubmit = (e: any) => {
+    e.preventDefault();
+    console.log(data);
   };
+
+  useEffect(() => {
+    if (data !== null) {
+      setIsValid(Object.values(data).every((value) => value !== ""));
+    }
+  }, [data]);
+
+  // const [meter, setMeter] = React.useState(false);
+  // const [password, setPassword] = React.useState("");
+  // const [passwordShown, setPasswordShown] = React.useState(false);
+  // const togglePassword = () => {
+  //   setPasswordShown(!passwordShown);
+  // };
+  // const passwordRegex =
+  //   /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/g;
+  // const atLeastOneUppercase = /[A-Z]/g; // capital letters from A to Z
+  // const atLeastOneLowercase = /[a-z]/g; // small letters from a to z
+  // const atLeastOneNumeric = /[0-9]/g; // numbers from 0 to 9
+  // const atLeastOneSpecialChar = /[#?!@$%^&*-]/g; // any of the special characters within the square brackets
+  // const eightCharsOrMore = /.{8,}/g; // eight characters or more
+
+  // const passwordTracker = {
+  //   uppercase: password.match(atLeastOneUppercase),
+  //   lowercase: password.match(atLeastOneLowercase),
+  //   number: password.match(atLeastOneNumeric),
+  //   specialChar: password.match(atLeastOneSpecialChar),
+  //   eightCharsOrGreater: password.match(eightCharsOrMore),
+  // };
+
+  // const passwordStrength = Object.values(passwordTracker).filter(
+  //   (value) => value
+  // ).length;
+
+  const handleChange = ({ target }: any) => {
+    const { name, value } = target;
+    const newData = Object.assign({}, data, { [name]: value });
+    setData(newData);
+  };
+
   return (
     <div>
       <Modal show={show} onHide={onClose} centered>
@@ -40,16 +77,20 @@ const Signin = (props: any) => {
         <Modal.Body className={styles.body_content}>
           <div className="d-flex  justify-content-center">
             <div>
-              <Image
-                src={Social1}
-                alt=""
-                width={38}
-                height={38}
-                className={styles.socialmedia}
-              />
+              <Link href="/">
+                <Image
+                  src={Social1}
+                  alt=""
+                  width={38}
+                  height={38}
+                  className={styles.socialmedia}
+                />
+              </Link>
             </div>
             <div>
-              <Image src={Social} alt="" width={38} height={38} />
+              <Link href="/">
+                <Image src={Social} alt="" width={38} height={38} />
+              </Link>
             </div>
           </div>
           <Form>
@@ -60,18 +101,16 @@ const Signin = (props: any) => {
                   name="fname"
                   placeholder="First Name"
                   autoComplete="off"
-                  value={fname}
-                  onChange={(e) => setFName(e.target.value)}
+                  onChange={handleChange}
                 />
               </Col>
               <Col style={{ paddingRight: "0px" }}>
                 <Form.Control
                   type="text"
                   name="lname"
-                  value={lname}
                   placeholder="Last Name"
                   autoComplete="off"
-                  onChange={(e) => setLName(e.target.value)}
+                  onChange={handleChange}
                 />
               </Col>
               <Form.Control
@@ -79,31 +118,50 @@ const Signin = (props: any) => {
                 name="email"
                 placeholder="Email Address"
                 autoComplete="off"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                onChange={handleChange}
               />
               <Form.Control
-                type="text"
                 placeholder="Password"
-                name="Password"
                 autoComplete="off"
-                value={pass}
-                onChange={(e) => setPass(e.target.value)}
+                // onFocus={() => setMeter(true)}
+                // value={password}
+                type="number"
+                name="password"
+                // type={passwordShown ? "text" : "password"}
+                onChange={handleChange}
               />
+              {/* <button type="button" onClick={togglePassword}>
+                Show Password
+              </button>
+              {meter && (
+                <div>
+                  <div className="password-strength-meter"></div>
+
+                  <div>
+                    {passwordStrength < 8 && "Must contain "}
+                    {!passwordTracker.uppercase && "uppercase, "}
+                    {!passwordTracker.lowercase && "lowercase, "}
+                    {!passwordTracker.specialChar && "special character, "}
+                    {!passwordTracker.number && "number, "}
+                    {!passwordTracker.eightCharsOrGreater &&
+                      "eight characters or more"}
+                  </div>
+                </div>
+              )} */}
               <Form.Control
                 type="text"
                 name="ConPassword"
                 placeholder="Confirm Password"
                 autoComplete="off"
-                value={conpass}
-                onChange={(e) => setConpass(e.target.value)}
+                onChange={handleChange}
               />
             </Row>
             <div className="text-center">
               <Button
-                className=" btn btn-violet"
+                className={`btn btn-violet ${styles.submit_butn}`}
                 type="submit"
-                disabled={!validate()}
+                disabled={!isValid}
+                onClick={handleSubmit}
               >
                 Continue
               </Button>
@@ -119,3 +177,34 @@ const Signin = (props: any) => {
 };
 
 export default Signin;
+{
+  /* <style jsx>
+  {`
+    input {
+      padding: 0.5rem;
+      border-radius: 0.5rem;
+      border: 1px solid grey;
+      max-width: 50%;
+      width: 100%;
+    }
+    .password-strength-meter {
+      height: 0.3rem;
+      background-color: lightgrey;
+      border-radius: 3px;
+      margin: 0.5rem 0;
+    }
+
+    .password-strength-meter::before {
+      content: "";
+      background-color: ${["red", "orange", "#03a2cc", "#03a2cc", "#0ce052"][
+        passwordStrength - 1
+      ] || ""};
+      height: 100%;
+      width: ${(passwordStrength / 5) * 100}%;
+      display: block;
+      border-radius: 3px;
+      transition: width 0.2s;
+    }
+  `}
+</style>; */
+}

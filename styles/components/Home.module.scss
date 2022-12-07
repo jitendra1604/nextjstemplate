@@ -125,6 +125,13 @@
     bottom: 0;
     width: 342.19px;
     height: 375px;
+    @media (max-width: 767px) {
+      background-image: url("../../public/images/banner_gray_mob.svg");
+      width: 85.91px;
+      height: 94.14px;
+      left: 0px;
+      top: 29px;
+    }
   }
   &::before {
     content: "";
@@ -135,6 +142,13 @@
     right: 0px;
     width: 150px;
     height: 375px;
+    @media (max-width: 767px) {
+      background-image: url("../../public/images/banner_gray2_mob.svg");
+      width: 80.62px;
+      height: 90.11px;
+      right: -45px;
+      bottom: 0px;
+    }
   }
   @media (max-width: 767px) {
     padding: 0px 15px;
