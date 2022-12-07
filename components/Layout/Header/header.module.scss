@@ -17,13 +17,14 @@
       left: 0;
       right: 0;
       padding: 47px 0 47px 79px;
-      z-index: 1;
+      opacity: 0;
       box-shadow: 0px 10px 10px rgba(92, 26, 83, 0.1);
       border: 1px solid #5c1a53;
       top: 100%;
+      transition: opacity 0.4s ease;
+      z-index: 0;
     }
     .fly_content {
-      display: none;
       h3,
       p {
         color: $secondary-vt-color;
@@ -50,6 +51,9 @@
             margin-left: 10px;
           }
         }
+        a:hover{
+          margin-left: -2em;
+        }
 
         a:nth-child(odd) {
           color: $secondary-vt-color;
@@ -67,9 +71,11 @@
           height: 100%;
           width: 100%;
           opacity: 0.7;
+          width: 100%;
+          transition: width 1s;
         }
         a:nth-child(odd)::after {
-          background: linear-gradient(
+          background-image: linear-gradient(
             270deg,
             #5c1a53 0%,
             rgba(92, 26, 83, 0) 65.37%,
@@ -83,6 +89,9 @@
             rgba(227, 165, 75, 0) 68.61%
           );
         }
+        a:nth-child(odd):hover::after, a:nth-child(even):hover::after {
+          width: 115%;
+        }
       }
     }
     .fly_cont {
@@ -94,14 +103,13 @@
     .fly_cont:hover {
       border-color: $secondary-vt-color;
       .fly_content {
-        display: block;
+        opacity: 1;
       }
     }
 
     .about_content {
       position: absolute;
       padding: 47px 0;
-      display: none;
       .mega_container {
         max-width: 1140px;
       }
@@ -175,6 +183,20 @@
         }
         figure {
           margin-bottom: 0;
+          position: relative;
+          transition: all 0.5s ease;
+        }
+        figure:hover::after{
+          content: '';
+          display: inline-block;
+          height: 100%;
+          width: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          background: rgb(218,167,91);
+          background: linear-gradient(359deg, rgb(190, 175, 97) 0%, rgba(97, 30, 88, 0.499037) 80%);
         }
       }
       .faded_imgs {
@@ -211,7 +233,8 @@
     .about_cont:hover {
       border-color: $secondary-vt-color;
       .about_content {
-        display: block;
+        opacity: 1;
+        z-index: 1;
       }
     }
     .discover_cont {
@@ -221,7 +244,6 @@
       }
       .discover_content {
         padding: 0;
-        display: none;
         .mega_container {
           max-width: 1225px;
         }
@@ -253,7 +275,8 @@
         border-bottom: none;
       }
       .discover_content {
-        display: block;
+        opacity: 1;
+        z-index: 1;
       }
     }
 
