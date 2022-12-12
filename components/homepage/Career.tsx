@@ -1,44 +1,40 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Col, Row } from "react-bootstrap";
-// import Lottie from "react-lottie";
+import Lottie from "react-lottie";
 import { Carrercontent } from "../Data/homepage";
 import Borderimg from "../../public/images/footerborder.svg";
+import Diamond1 from "../../public/images/diamond_slick.svg";
+
 import Image from "next/image";
 import styles from "../../styles/components/Home.module.scss";
 import Slider from "react-slick";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
-// import animationData from "../../public/animate/Frame_1.json";
-// import animationData1 from "../../public/animate/Full_Frame.json";
-
+import animationData from "../../public/animate/Frame.json";
+import AOS from "aos";
+import "aos/dist/aos.css";
 const settings = {
-  dots: false,
-  fade: true,
+  dots: true,
   infinite: true,
-  speed: 500,
+  speed: 900,
   slidesToShow: 1,
   slidesToScroll: 1,
   autoplay: true,
 };
-// const defaultOptions = {
-//   loop: true,
-//   autoplay: true,
-//   animationData: animationData,
-//   rendererSettings: {
-//     preserveAspectRatio: "xMidYMid slice",
-//   },
-// };
-// const defaultOptions1 = {
-//   loop: true,
-//   autoplay: true,
-//   animationData: animationData1,
-//   rendererSettings: {
-//     preserveAspectRatio: "xMidYMid slice",
-//   },
-// };
+const defaultOptions = {
+  loop: true,
+  autoplay: true,
+  animationData: animationData,
+  rendererSettings: {
+    preserveAspectRatio: "xMidYMid slice",
+  },
+};
 function Career() {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
-    <section className={styles.careercontent}>
+    <section className={`${styles.careercontent} career_section`}>
       <div>
         <Row>
           <Col sm={6}>
@@ -73,18 +69,30 @@ function Career() {
             </Form>
           </Col>
           <Col sm={6}>
-            {/* <Lottie options={defaultOptions} /> */}
-            {/* <Lottie options={defaultOptions1} /> */}
+            <div
+              data-aos="zoom-in"
+              data-aos-duration="2000"
+              className={styles.Ds_section}
+            >
+              <Lottie options={defaultOptions} />
+            </div>
 
             {Carrercontent.map((data, index) => {
               return (
-                <div key={data.id}>
-                  <div>
+                <div key={data.id} className={styles.Mb_section}>
+                  <div className={styles.slider_sec}>
                     <Slider {...settings}>
                       {data.slidersection.map((subdata, index) => {
                         return (
                           <div key={subdata.id}>
-                            <p className="slicksection">{subdata.title}</p>
+                            <div className="d-inline-flex">
+                              <div className="me-2">
+                                <Image src={Diamond1} alt="" />
+                              </div>
+                              <div>
+                                <p className="slicksection">{subdata.title}</p>
+                              </div>
+                            </div>
                             <p className="max_323">{subdata.content}</p>
                           </div>
                         );

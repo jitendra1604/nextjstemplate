@@ -112,6 +112,7 @@
 // Home page
 .bannersec {
   // height: calc(100vh - 98px);
+  margin-top: 130px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -152,6 +153,7 @@
   }
   @media (max-width: 767px) {
     padding: 0px 15px;
+    margin-top: 120px;
   }
   @media (max-width: 425px) {
     height: auto;
@@ -295,6 +297,21 @@
 }
 
 .careercontent {
+  .Mb_section {
+    display: none;
+    .slider_sec {
+      margin-bottom: 140px;
+    }
+    @media (max-width: 767px) {
+      display: block;
+    }
+  }
+  .Ds_section {
+    display: block;
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
   margin: 0px 80px;
   @media (max-width: 767px) {
     margin: 0px 15px;
@@ -343,6 +360,7 @@
       height: unset !important;
     }
   }
+
   form {
     display: flex;
     @media (max-width: 767px) {
@@ -601,6 +619,11 @@
         background-image: url("/images/gray_shade.svg");
         top: 0px;
         left: 0px;
+        @media (max-width: 767px) {
+          height: 100%;
+          object-fit: cover;
+          background-size: 100%;
+        }
       }
     }
   }

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useRef } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
@@ -21,6 +21,9 @@ import Signin from "../../Modals/Signinmodal/Signin";
 
 export const Header = () => {
   const [show, setShow] = useState(false);
+  const [lastScrollY, setLastScrollY] = useState(0);
+  const [headershow, setHeaderShow] = useState(false);
+
   const handleShow = () => setShow(true);
   const handleClose = () => setShow(false);
   const showAboutopt = useRef<any>(undefined);
@@ -28,6 +31,27 @@ export const Header = () => {
   const showAccredaSignopt = useRef<any>(undefined);
   const showFlyopt = useRef<any>(undefined);
 
+  const ControlNavbar = () => {
+    if (typeof window !== "undefined") {
+      if (window.scrollY > lastScrollY) {
+        setHeaderShow(true);
+      } else {
+        setHeaderShow(false);
+      }
+      setLastScrollY(window.scrollY);
+    }
+  };
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", ControlNavbar);
+
+      // cleanup function
+      return () => {
+        window.removeEventListener("scroll", ControlNavbar);
+      };
+    }
+  }, [lastScrollY]);
   const showAboutMenu = () => {
     if (showAboutopt.current !== undefined) {
       showAboutopt.current.classList.add("active");
@@ -77,7 +101,10 @@ export const Header = () => {
   };
 
   return (
-    <Navbar className={`${styles.header} header_resp`} expand="lg">
+    <Navbar
+      className={`${styles.header} header_resp ${headershow && "nav_blue"}`}
+      expand="lg"
+    >
       <Container>
         <Navbar.Brand href="#home">
           <Image src={logo} alt="Logo" />

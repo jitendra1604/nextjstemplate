@@ -62,3 +62,13 @@ img {
     }
   }
 }
+.password_section {
+  position: relative;
+  padding: 0px;
+  .eyeicon {
+    position: absolute;
+    top: 24px;
+    right: 34px;
+    cursor: pointer;
+  }
+}

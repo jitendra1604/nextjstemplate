@@ -155,6 +155,34 @@
 .fly_menu.active {
   right: 0;
 }
+.header_resp {
+  position: fixed !important;
+  width: 100%;
+  background-color: #fff;
+  z-index: 10000;
+  top: 0;
+  transition: padding 300ms ease;
+}
+.nav_blue {
+  display: none;
+  transition: padding 300ms ease;
+}
+.career_section .slick-dots li button:before {
+  color: #5c1a53;
+  opacity: 0.5;
+  width: 8px;
+  height: 8px;
+}
+.career_section .slick-dots li.slick-active button:before {
+  width: 25px;
+  height: 8px;
+  background: #daa75b;
+  border-radius: 20px;
+  content: "" !important;
+  top: 5px;
+  opacity: inherit;
+  transition-duration: 0.5s;
+}
 
 @media only screen and (max-width: 991px) {
   .header_resp .navbar-brand {

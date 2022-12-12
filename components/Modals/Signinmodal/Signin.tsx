@@ -10,7 +10,7 @@ import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Link from "next/link";
-
+import { BsFillEyeFill } from "react-icons/bs";
 const Signin = (props: any) => {
   const { show, onClose } = props;
   const [data, setData] = useState({
@@ -33,31 +33,31 @@ const Signin = (props: any) => {
     }
   }, [data]);
 
-  // const [meter, setMeter] = React.useState(false);
-  // const [password, setPassword] = React.useState("");
-  // const [passwordShown, setPasswordShown] = React.useState(false);
-  // const togglePassword = () => {
-  //   setPasswordShown(!passwordShown);
-  // };
+  const [meter, setMeter] = React.useState(false);
+  const [password, setPassword] = React.useState("");
+  const [passwordShown, setPasswordShown] = React.useState(false);
+  const togglePassword = () => {
+    setPasswordShown(!passwordShown);
+  };
   // const passwordRegex =
   //   /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/g;
-  // const atLeastOneUppercase = /[A-Z]/g; // capital letters from A to Z
-  // const atLeastOneLowercase = /[a-z]/g; // small letters from a to z
-  // const atLeastOneNumeric = /[0-9]/g; // numbers from 0 to 9
-  // const atLeastOneSpecialChar = /[#?!@$%^&*-]/g; // any of the special characters within the square brackets
-  // const eightCharsOrMore = /.{8,}/g; // eight characters or more
+  const atLeastOneUppercase = /[A-Z]/g; // capital letters from A to Z
+  const atLeastOneLowercase = /[a-z]/g; // small letters from a to z
+  const atLeastOneNumeric = /[0-9]/g; // numbers from 0 to 9
+  const atLeastOneSpecialChar = /[#?!@$%^&*-]/g; // any of the special characters within the square brackets
+  const eightCharsOrMore = /.{8,}/g; // eight characters or more
 
-  // const passwordTracker = {
-  //   uppercase: password.match(atLeastOneUppercase),
-  //   lowercase: password.match(atLeastOneLowercase),
-  //   number: password.match(atLeastOneNumeric),
-  //   specialChar: password.match(atLeastOneSpecialChar),
-  //   eightCharsOrGreater: password.match(eightCharsOrMore),
-  // };
+  const passwordTracker = {
+    uppercase: password.match(atLeastOneUppercase),
+    lowercase: password.match(atLeastOneLowercase),
+    number: password.match(atLeastOneNumeric),
+    specialChar: password.match(atLeastOneSpecialChar),
+    eightCharsOrGreater: password.match(eightCharsOrMore),
+  };
 
-  // const passwordStrength = Object.values(passwordTracker).filter(
-  //   (value) => value
-  // ).length;
+  const passwordStrength = Object.values(passwordTracker).filter(
+    (value) => value
+  ).length;
 
   const handleChange = ({ target }: any) => {
     const { name, value } = target;
@@ -120,19 +120,25 @@ const Signin = (props: any) => {
                 autoComplete="off"
                 onChange={handleChange}
               />
-              <Form.Control
-                placeholder="Password"
-                autoComplete="off"
-                // onFocus={() => setMeter(true)}
-                // value={password}
-                type="password"
-                name="password"
-                // type={passwordShown ? "text" : "password"}
-                onChange={handleChange}
-              />
-              {/* <button type="button" onClick={togglePassword}>
-                Show Password
-              </button>
+              <div className={styles.password_section}>
+                <Form.Control
+                  placeholder="Password"
+                  autoComplete="off"
+                  onFocus={() => setMeter(true)}
+                  value={password}
+                  name="password"
+                  type={passwordShown ? "text" : "password"}
+                  // onChange={handleChange}
+
+                  onChange={(e) => setPassword(e.target.value)}
+                />
+                {/* <button type="button" className="mt-0" onClick={togglePassword}>
+              </button> */}
+                <BsFillEyeFill
+                  onClick={togglePassword}
+                  className={styles.eyeicon}
+                />
+              </div>
               {meter && (
                 <div>
                   <div className="password-strength-meter"></div>
@@ -147,7 +153,7 @@ const Signin = (props: any) => {
                       "eight characters or more"}
                   </div>
                 </div>
-              )} */}
+              )}
               <Form.Control
                 type="password"
                 name="ConPassword"
@@ -177,8 +183,9 @@ const Signin = (props: any) => {
 };
 
 export default Signin;
+
 {
-  /* <style jsx>
+  /* <style >
   {`
     input {
       padding: 0.5rem;
@@ -196,9 +203,11 @@ export default Signin;
 
     .password-strength-meter::before {
       content: "";
-      background-color: ${["red", "orange", "#03a2cc", "#03a2cc", "#0ce052"][
-        passwordStrength - 1
-      ] || ""};
+      background-color: ${
+        ["red", "orange", "#03a2cc", "#03a2cc", "#0ce052"][
+          passwordStrength - 1
+        ] || ""
+      };
       height: 100%;
       width: ${(passwordStrength / 5) * 100}%;
       display: block;

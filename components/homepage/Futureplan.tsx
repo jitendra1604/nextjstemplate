@@ -49,8 +49,6 @@ const Futureplan = () => {
           autoplay: false,
           arrows: false,
           slidesToScroll: 1,
-          vertical: true,
-          verticalSwiping: true,
         },
       },
     ],
