@@ -10,7 +10,7 @@ import styles from "../../styles/components/Home.module.scss";
 import Slider from "react-slick";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
-import animationData from "../../public/animate/Frame.json";
+import animationData from "../../public/animate/Frame_name.json";
 import AOS from "aos";
 import "aos/dist/aos.css";
 const settings = {

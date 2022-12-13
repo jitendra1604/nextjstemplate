@@ -6,7 +6,10 @@ interface Props {
   children?: ReactNode;
 }
 
-export const Layout = ({ children, ...props }: Props) => {
+export const Layout = React.memo(function Layout({
+  children,
+  ...props
+}: Props) {
   return (
     <>
       <div className="wrapper">
@@ -16,4 +19,4 @@ export const Layout = ({ children, ...props }: Props) => {
       </div>
     </>
   );
-};
+});
