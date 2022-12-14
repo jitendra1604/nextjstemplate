@@ -18,14 +18,21 @@ import flyMenuIcon from "../../../public/images/fly_m_icon.png";
 import styles from "./header.module.scss";
 import { Button, Card, Col, Row, Tab } from "react-bootstrap";
 import Signin from "../../Modals/Signinmodal/Signin";
+import Loginmodal from "../../Modals/Loginmodal/Loginmodal";
 
 export const Header = () => {
   const [show, setShow] = useState(false);
+  const [showLoginModal, setShowLoginModal] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [headershow, setHeaderShow] = useState(false);
 
   const handleShow = () => setShow(true);
+  const handleShowLoginModal = () => {
+    setShowLoginModal(true);
+    handleClose();
+  };
   const handleClose = () => setShow(false);
+  const handleCloseLoginModal = () => setShowLoginModal(false);
   const showAboutopt = useRef<any>(undefined);
   const showDisvoveropt = useRef<any>(undefined);
   const showAccredaSignopt = useRef<any>(undefined);
@@ -506,7 +513,12 @@ export const Header = () => {
           <Button className={styles.outline_btn} onClick={handleShow}>
             Log in
           </Button>
-          <Signin show={show} onClose={handleClose} />
+          <Signin
+            show={show}
+            onClose={handleClose}
+            onShowLogin={handleShowLoginModal}
+          />
+          <Loginmodal show={showLoginModal} onClose={handleCloseLoginModal} />
 
           {/* <Navbar.Offcanvas
               id={`offcanvasNavbar-expand-${expand}`}

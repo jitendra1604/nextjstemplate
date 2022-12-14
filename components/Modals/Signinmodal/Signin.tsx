@@ -12,7 +12,7 @@ import Col from "react-bootstrap/Col";
 import Link from "next/link";
 import { BsFillEyeFill } from "react-icons/bs";
 const Signin = (props: any) => {
-  const { show, onClose } = props;
+  const { show, onClose, onShowLogin = () => {} } = props;
   const [data, setData] = useState({
     fname: "",
     lname: "",
@@ -174,7 +174,10 @@ const Signin = (props: any) => {
             </div>
           </Form>
           <p className="text-center my-4">
-            Already have an account? <a href="#">Login</a>
+            Already have an account?{" "}
+            <a href="#" onClick={onShowLogin}>
+              Login
+            </a>
           </p>
         </Modal.Body>
       </Modal>
