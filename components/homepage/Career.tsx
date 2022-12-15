@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Col, Row } from "react-bootstrap";
-import Lottie from "react-lottie";
+// import Lottie from "react-lottie";
 import { Carrercontent } from "../Data/homepage";
 import Borderimg from "../../public/images/footerborder.svg";
 import Diamond1 from "../../public/images/diamond_slick.svg";
@@ -10,7 +10,7 @@ import styles from "../../styles/components/Home.module.scss";
 import Slider from "react-slick";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
-import animationData from "../../public/animate/Frame_name.json";
+// import animationData from "../../public/animate/Frame_name.json";
 import AOS from "aos";
 import "aos/dist/aos.css";
 const settings = {
@@ -21,14 +21,14 @@ const settings = {
   slidesToScroll: 1,
   autoplay: true,
 };
-const defaultOptions = {
-  loop: true,
-  autoplay: true,
-  animationData: animationData,
-  rendererSettings: {
-    preserveAspectRatio: "xMidYMid slice",
-  },
-};
+// const defaultOptions = {
+//   loop: true,
+//   autoplay: true,
+//   animationData: animationData,
+//   rendererSettings: {
+//     preserveAspectRatio: "xMidYMid slice",
+//   },
+// };
 function Career() {
   useEffect(() => {
     AOS.init();
@@ -69,13 +69,13 @@ function Career() {
             </Form>
           </Col>
           <Col sm={6}>
-            <div
+            {/* <div
               data-aos="zoom-in"
               data-aos-duration="2000"
               className={styles.Ds_section}
             >
               <Lottie options={defaultOptions} />
-            </div>
+            </div> */}
 
             {Carrercontent.map((data, index) => {
               return (
