@@ -2,6 +2,7 @@
 @import "../styles/components/Modalpop.module.scss";
 @import "./buttons/buttons.scss";
 @import "../styles/variables.scss";
+
 html,
 body {
   padding: 0;
@@ -33,52 +34,66 @@ h1 {
   letter-spacing: -0.02em;
   font-family: "Playfair Display", serif;
 }
+
 h2 {
   font-size: 48px;
   line-height: 1.2;
   font-weight: 500;
   font-family: "Playfair Display", serif;
 }
+
 h3 {
   font-size: 32px;
   line-height: 1.3;
   font-weight: 500;
   font-family: "Playfair Display", serif;
 }
+
 h4 {
   font-size: 24px;
   line-height: 1.2;
   font-weight: 500;
   font-family: "Playfair Display", serif;
 }
+
 h6 {
   font-size: 26px;
 
   line-height: 1.2;
 }
+
 h5 {
   font-size: 18px;
   line-height: 1.5;
   font-weight: 500;
   font-family: "Playfair Display", serif;
 }
+
 p {
   font-size: 16px;
   line-height: 1.5;
   font-weight: 400;
 }
+
 .p_primary {
   font-size: 14px;
   line-height: 1.4;
   font-weight: 400;
   font-family: "Playfair Display", serif;
 }
+
 .p-secondary {
   font-size: 18px;
   line-height: 1.5;
   font-weight: 400;
   font-family: "Playfair Display", serif;
 }
+
+.input-group-text {
+  background: none;
+  border: none;
+}
+
 
 // Typography //
 
