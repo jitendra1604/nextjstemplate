@@ -129,7 +129,6 @@ const Signin = (props: any) => {
                   name="password"
                   type={passwordShown ? "text" : "password"}
                   // onChange={handleChange}
-
                   onChange={(e) => setPassword(e.target.value)}
                 />
                 {/* <button type="button" className="mt-0" onClick={togglePassword}>
