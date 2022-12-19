@@ -19,20 +19,42 @@ import styles from "./header.module.scss";
 import { Button, Card, Col, Row, Tab } from "react-bootstrap";
 import Signin from "../../Modals/Signinmodal/Signin";
 import Loginmodal from "../../Modals/Loginmodal/Loginmodal";
+import ForgotPasswordModal from "../../Modals/ForgotPasswordModal/ForgotPasswordModal";
+import SentMailSuccessModal from "../../Modals/SentMailSuccessModal/SentMailSuccessModal";
 
 export const Header = () => {
   const [show, setShow] = useState(false);
   const [showLoginModal, setShowLoginModal] = useState(false);
+  const [showForgotPasswordModal, setShowForgotPasswordModal] = useState(false);
+  const [showSentMailSuccessModal, setShowSentMailSuccessModal] =
+    useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [headershow, setHeaderShow] = useState(false);
 
   const handleShow = () => setShow(true);
+
   const handleShowLoginModal = () => {
     setShowLoginModal(true);
     handleClose();
   };
+
+  const handleShowForgotPassword = () => {
+    setShowForgotPasswordModal(true);
+    handleCloseLoginModal();
+  };
+
+  const handleShowSentMailSuccessModal = () => {
+    setShowSentMailSuccessModal(true);
+    handleCloseForgotPasswordModal();
+  };
+
   const handleClose = () => setShow(false);
+  // close Login modal
   const handleCloseLoginModal = () => setShowLoginModal(false);
+  const handleCloseSentMailSuccessModal = () =>
+    setShowSentMailSuccessModal(false);
+  const handleCloseForgotPasswordModal = () =>
+    setShowForgotPasswordModal(false);
   const showAboutopt = useRef<any>(undefined);
   const showDisvoveropt = useRef<any>(undefined);
   const showAccredaSignopt = useRef<any>(undefined);
@@ -518,8 +540,20 @@ export const Header = () => {
             onClose={handleClose}
             onShowLogin={handleShowLoginModal}
           />
-          <Loginmodal show={showLoginModal} onClose={handleCloseLoginModal} />
-
+          <Loginmodal
+            show={showLoginModal}
+            onClose={handleCloseLoginModal}
+            onShowForgotPassword={handleShowForgotPassword}
+          />
+          <ForgotPasswordModal
+            show={showForgotPasswordModal}
+            onClose={handleCloseForgotPasswordModal}
+            onShowSentMail={handleShowSentMailSuccessModal}
+          />
+          <SentMailSuccessModal
+            show={showSentMailSuccessModal}
+            onClose={handleCloseSentMailSuccessModal}
+          />
           {/* <Navbar.Offcanvas
               id={`offcanvasNavbar-expand-${expand}`}
               aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}

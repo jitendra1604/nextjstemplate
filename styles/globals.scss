@@ -94,6 +94,22 @@ p {
   border: none;
 }
 
+.modal-sigin-flow {
+
+  .modal-dialog {
+    background: #fff;
+    max-width: 580px;
+    min-height: auto;
+
+    .modal-content {
+      border: none;
+      height: 690px;
+      background: url("../public/images/backgroundModalLeft.png"), url("../public/images/backgroundModalRight.png");
+      background-repeat: no-repeat;
+      background-position: 0 90%, 100% 90%;
+    }
+  }
+}
 
 // Typography //
 

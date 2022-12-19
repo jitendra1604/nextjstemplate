@@ -67,7 +67,13 @@ const Signin = (props: any) => {
 
   return (
     <div>
-      <Modal show={show} onHide={onClose} centered>
+      <Modal
+        show={show}
+        onHide={onClose}
+        dialogClassName="dialog-signin"
+        className="modal-sigin-flow"
+        centered
+      >
         <Modal.Header closeButton>
           <Modal.Title>
             <Image src={Signlogo} alt="" width={49} height={49} />
