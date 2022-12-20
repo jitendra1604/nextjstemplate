@@ -21,13 +21,22 @@ import Signin from "../../Modals/Signinmodal/Signin";
 import Loginmodal from "../../Modals/Loginmodal/Loginmodal";
 import ForgotPasswordModal from "../../Modals/ForgotPasswordModal/ForgotPasswordModal";
 import SentMailSuccessModal from "../../Modals/SentMailSuccessModal/SentMailSuccessModal";
+import { useRouter } from "next/router";
+import ResetPasswordModal from "../../Modals/ResetPasswordModal/ResetPasswordModal";
+import PasswordChangedModal from "../../Modals/PasswordChangedModal/PasswordChangedModal";
 
 export const Header = () => {
+  const router = useRouter();
+
   const [show, setShow] = useState(false);
   const [showLoginModal, setShowLoginModal] = useState(false);
   const [showForgotPasswordModal, setShowForgotPasswordModal] = useState(false);
   const [showSentMailSuccessModal, setShowSentMailSuccessModal] =
     useState(false);
+  const [showResetPasswordModal, setShowResetPasswordModal] = useState(false);
+  const [showPasswordChangedModal, setShowPasswordChangedModal] =
+    useState(false);
+
   const [lastScrollY, setLastScrollY] = useState(0);
   const [headershow, setHeaderShow] = useState(false);
 
@@ -48,6 +57,16 @@ export const Header = () => {
     handleCloseForgotPasswordModal();
   };
 
+  const handleBackToLogin = () => {
+    setShowPasswordChangedModal(false);
+    handleShowLoginModal();
+  };
+
+  const handleShowPasswordChanged = () => {
+    setShowPasswordChangedModal(true);
+    handleCloseResetPasswordModal();
+  };
+
   const handleClose = () => setShow(false);
   // close Login modal
   const handleCloseLoginModal = () => setShowLoginModal(false);
@@ -55,6 +74,13 @@ export const Header = () => {
     setShowSentMailSuccessModal(false);
   const handleCloseForgotPasswordModal = () =>
     setShowForgotPasswordModal(false);
+  const handleCloseResetPasswordModal = () => {
+    setShowResetPasswordModal(false);
+    router.push("/");
+  };
+  const handleClosePasswordChangedModal = () => {
+    setShowPasswordChangedModal(false);
+  };
   const showAboutopt = useRef<any>(undefined);
   const showDisvoveropt = useRef<any>(undefined);
   const showAccredaSignopt = useRef<any>(undefined);
@@ -70,6 +96,13 @@ export const Header = () => {
       setLastScrollY(window.scrollY);
     }
   };
+
+  useEffect(() => {
+    // show if url have forgot true
+    if (router.query.forgot) {
+      setShowResetPasswordModal(true);
+    }
+  }, [router.query.forgot]);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -553,6 +586,16 @@ export const Header = () => {
           <SentMailSuccessModal
             show={showSentMailSuccessModal}
             onClose={handleCloseSentMailSuccessModal}
+          />
+          <ResetPasswordModal
+            show={showResetPasswordModal}
+            onClose={handleCloseResetPasswordModal}
+            showPasswordChanged={handleShowPasswordChanged}
+          />
+          <PasswordChangedModal
+            show={showPasswordChangedModal}
+            onClose={handleClosePasswordChangedModal}
+            backToLogin={handleBackToLogin}
           />
           {/* <Navbar.Offcanvas
               id={`offcanvasNavbar-expand-${expand}`}
