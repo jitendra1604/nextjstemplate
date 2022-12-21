@@ -64,8 +64,12 @@ const ResetPasswordModal = (props: any) => {
 
   const renderStrength = () => {
     const line = new Array(3).fill(null);
+    const obj = {
+      line,
+      title: <span className={`${styles.status} ${styles.weak}`}>Weak</span>,
+    };
     if (passwordStrength <= 2) {
-      return line.map((val, index) => {
+      const result = line.map((val, index) => {
         if (index === 0) {
           return (val = (
             <span className={`${styles.lineWeak} ${styles.line}`}></span>
@@ -73,9 +77,10 @@ const ResetPasswordModal = (props: any) => {
         }
         return (val = <span className={` ${styles.line}`}></span>);
       });
+      return { ...obj, line: result };
     }
     if (passwordStrength > 2 && passwordStrength < 4) {
-      return line.map((val, index) => {
+      const result = line.map((val, index) => {
         if (index <= 1) {
           return (val = (
             <span className={`${styles.lineMedium} ${styles.line}`}></span>
@@ -83,16 +88,29 @@ const ResetPasswordModal = (props: any) => {
         }
         return (val = <span className={` ${styles.line}`}></span>);
       });
+      return {
+        ...obj,
+        line: result,
+        title: (
+          <span className={`${styles.status} ${styles.medium}`}>Medium</span>
+        ),
+      };
     }
     if (passwordStrength === 4) {
-      return line.map((val, index) => {
+      const result = line.map((val, index) => {
         return (val = (
           <span className={`${styles.lineStrong} ${styles.line}`}></span>
         ));
       });
+      return {
+        ...obj,
+        line: result,
+        title: (
+          <span className={`${styles.status} ${styles.strong}`}>Strong</span>
+        ),
+      };
     }
   };
-
   const renderMatchPassword = () => {
     if (meterSecondPass && !isValid) {
       return (
@@ -166,8 +184,8 @@ const ResetPasswordModal = (props: any) => {
             {meter && (
               <div className={styles.passwordValidate}>
                 <div className={styles.strength}>
-                  <span className={styles.status}>Weak</span>
-                  {renderStrength().map((val) => val)}
+                  {renderStrength()?.title}
+                  {renderStrength()?.line.map((val) => val)}
                 </div>
                 <ul>
                   <li

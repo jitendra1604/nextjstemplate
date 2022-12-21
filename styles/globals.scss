@@ -103,10 +103,14 @@ p {
 
     .modal-content {
       border: none;
-      height: 690px;
+      height: auto;
       background: url("../public/images/backgroundModalLeft.png"), url("../public/images/backgroundModalRight.png");
       background-repeat: no-repeat;
       background-position: 0 90%, 100% 90%;
+
+      @media screen and (max-width:500px) {
+        background-position: 0 100%, 100% 100%;
+      }
     }
   }
 }

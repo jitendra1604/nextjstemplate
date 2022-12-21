@@ -5,9 +5,13 @@ import "../styles/globals.scss";
 import "../styles/App.css";
 import "../public/slick.min.css";
 import "../public/slick-theme.min.css";
-
+import { SSRProvider } from "react-bootstrap";
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+  return (
+    <SSRProvider>
+      <Component {...pageProps} />
+    </SSRProvider>
+  );
 }
 
 export default MyApp;

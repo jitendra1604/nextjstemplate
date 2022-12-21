@@ -24,6 +24,7 @@ import SentMailSuccessModal from "../../Modals/SentMailSuccessModal/SentMailSucc
 import { useRouter } from "next/router";
 import ResetPasswordModal from "../../Modals/ResetPasswordModal/ResetPasswordModal";
 import PasswordChangedModal from "../../Modals/PasswordChangedModal/PasswordChangedModal";
+import WorkExperienceModal from "../../Modals/WorkExperienceModal/WorkExperienceModal";
 
 export const Header = () => {
   const router = useRouter();
@@ -36,6 +37,7 @@ export const Header = () => {
   const [showResetPasswordModal, setShowResetPasswordModal] = useState(false);
   const [showPasswordChangedModal, setShowPasswordChangedModal] =
     useState(false);
+  const [showWorkExperienceModal, setShowWorkExperienceModal] = useState(false);
 
   const [lastScrollY, setLastScrollY] = useState(0);
   const [headershow, setHeaderShow] = useState(false);
@@ -66,7 +68,10 @@ export const Header = () => {
     setShowPasswordChangedModal(true);
     handleCloseResetPasswordModal();
   };
-
+  const handleShowWorkExperience = () => {
+    setShowWorkExperienceModal(true);
+    handleClose();
+  };
   const handleClose = () => setShow(false);
   // close Login modal
   const handleCloseLoginModal = () => setShowLoginModal(false);
@@ -80,6 +85,9 @@ export const Header = () => {
   };
   const handleClosePasswordChangedModal = () => {
     setShowPasswordChangedModal(false);
+  };
+  const handleCloseWorkExperienceModal = () => {
+    setShowWorkExperienceModal(false);
   };
   const showAboutopt = useRef<any>(undefined);
   const showDisvoveropt = useRef<any>(undefined);
@@ -572,6 +580,7 @@ export const Header = () => {
             show={show}
             onClose={handleClose}
             onShowLogin={handleShowLoginModal}
+            onShowWorkExperience={handleShowWorkExperience}
           />
           <Loginmodal
             show={showLoginModal}
@@ -596,6 +605,10 @@ export const Header = () => {
             show={showPasswordChangedModal}
             onClose={handleClosePasswordChangedModal}
             backToLogin={handleBackToLogin}
+          />
+          <WorkExperienceModal
+            show={showWorkExperienceModal}
+            onClose={handleCloseWorkExperienceModal}
           />
           {/* <Navbar.Offcanvas
               id={`offcanvasNavbar-expand-${expand}`}

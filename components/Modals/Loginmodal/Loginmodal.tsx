@@ -11,11 +11,8 @@ import Modal from "react-bootstrap/Modal";
 import styles from "./Loginmodal.module.scss";
 import { BsFillEyeFill } from "react-icons/bs";
 import HidePassword from "../../../public/images/Hide.png";
-import { useRouter } from "next/router";
 
 const Loginmodal = (props: any) => {
-  const router = useRouter();
-  console.log(router.pathname);
   const { show, onClose = () => {}, onShowForgotPassword = () => {} } = props;
 
   const [passwordShown, setPasswordShown] = React.useState(false);
@@ -46,7 +43,6 @@ const Loginmodal = (props: any) => {
     const { name, value } = target;
     const newData = Object.assign({}, data, { [name]: value });
     if (checkMatchRegex(newData.email, "email")) {
-      console.log(newData);
       setData(newData);
     } else {
       setData({ ...data, email: "" });
