@@ -1,7 +1,6 @@
 import React, { ReactNode } from "react";
 import { Footer } from "./Layout/footer";
 import { Header } from "./Layout/Header/header";
-import { SSRProvider } from "react-bootstrap";
 interface Props {
   children?: ReactNode;
 }

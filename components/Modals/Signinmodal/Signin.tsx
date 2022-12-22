@@ -72,7 +72,7 @@ const Signin = (props: any) => {
     uppercase: data?.password.match(atLeastOneUppercase),
     lowercase: data?.password.match(atLeastOneLowercase),
     number: data?.password.match(atLeastOneNumeric),
-    // specialChar: password.match(atLeastOneSpecialChar),
+    specialChar: data?.password.match(atLeastOneSpecialChar),
     eightCharsOrGreater: data?.password.match(eightCharsOrMore),
   };
 
@@ -144,7 +144,7 @@ const Signin = (props: any) => {
     ) {
       return (
         <div className={styles.passwordValidate}>
-          <p className={styles.notMatch}>Password doesn't match</p>
+          <p className={styles.notMatch}>Password doesnt match</p>
         </div>
       );
     } else if (
@@ -347,37 +347,3 @@ const Signin = (props: any) => {
 };
 
 export default Signin;
-
-{
-  /* <style >
-  {`
-    input {
-      padding: 0.5rem;
-      border-radius: 0.5rem;
-      border: 1px solid grey;
-      max-width: 50%;
-      width: 100%;
-    }
-    .password-strength-meter {
-      height: 0.3rem;
-      background-color: lightgrey;
-      border-radius: 3px;
-      margin: 0.5rem 0;
-    }
-
-    .password-strength-meter::before {
-      content: "";
-      background-color: ${
-        ["red", "orange", "#03a2cc", "#03a2cc", "#0ce052"][
-          passwordStrength - 1
-        ] || ""
-      };
-      height: 100%;
-      width: ${(passwordStrength / 5) * 100}%;
-      display: block;
-      border-radius: 3px;
-      transition: width 0.2s;
-    }
-  `}
-</style>; */
-}

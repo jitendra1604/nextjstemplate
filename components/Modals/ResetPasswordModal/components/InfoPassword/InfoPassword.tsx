@@ -8,8 +8,8 @@ const InfoPassword = (props: any) => {
       <div className={styles.content}>
         <h3>{title}</h3>
         <ul>
-          {list.map((x) => (
-            <li>{x}</li>
+          {list.map((x: any) => (
+            <li key={1}>{x}</li>
           ))}
         </ul>
       </div>

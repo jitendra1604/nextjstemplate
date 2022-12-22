@@ -115,7 +115,7 @@ const ResetPasswordModal = (props: any) => {
     if (meterSecondPass && !isValid) {
       return (
         <div className={styles.passwordValidate}>
-          <p className={styles.notMatch}>Password doesn't match</p>
+          <p className={styles.notMatch}>Password doesnt match</p>
         </div>
       );
     } else if (meterSecondPass && isValid) {

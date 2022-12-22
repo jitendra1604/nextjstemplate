@@ -14,21 +14,27 @@ import Button from "react-bootstrap/Button";
 import AOS from "aos";
 import "aos/dist/aos.css";
 const settings = {
-  dots: true,
+  dots: false,
   infinite: true,
   speed: 900,
   slidesToShow: 1,
   slidesToScroll: 1,
   autoplay: true,
+  fade: true,
+  responsive: [
+    {
+      breakpoint: 480,
+      settings: {
+        speed: 900,
+        dots: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        fade: false,
+      },
+    },
+  ],
 };
-// const defaultOptions = {
-//   loop: true,
-//   autoplay: true,
-//   animationData: animationData,
-//   rendererSettings: {
-//     preserveAspectRatio: "xMidYMid slice",
-//   },
-// };
+
 function Career() {
   useEffect(() => {
     AOS.init();
@@ -79,7 +85,8 @@ function Career() {
 
             {Carrercontent.map((data, index) => {
               return (
-                <div key={data.id} className={styles.Mb_section}>
+                <div key={data.id}>
+                  {/* className={styles.Mb_section} */}
                   <div className={styles.slider_sec}>
                     <Slider {...settings}>
                       {data.slidersection.map((subdata, index) => {
