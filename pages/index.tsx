@@ -7,12 +7,12 @@ const Home: NextPage = () => {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Acreda</title>
-        <meta name="description" content="PS group" />
+        <title>project_name</title>
+        <meta name="description" content="project_name" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <>Welcome TO PS GROUP</>
+      <>Welcome to project_name</>
     </div>
   );
 };
